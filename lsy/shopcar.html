@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录</title>
+    <style type="text/css">
+    /*头部   开始*/
+	body{
+		display: flex;
+		flex-direction: column;
+	}
+    .top {
+        width: 100%;
+        height: 185px;
+    }
+
+    .top_box {
+        width: 1204px;
+        height: 135px;
+        margin: 0 auto;
+    }
+
+    .top_box_1 {
+        width: 1204px;
+        height: 35px;
+        border: 1px solid darkgray;
+        background: #EEEEEE;
+        position: relative;
+    }
+
+    .top_box_1_01 {
+        width: 270px;
+        height: 35px;
+    }
+
+    .top_box_1_01>p {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .top_box_1_02 {
+        width: 690px;
+        height: 35px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .top_box_1_02>ul li {
+        list-style: none;
+        float: left;
+        width: 115px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .top_box_1_02>ul li:nth-of-type(1) {
+        color: red;
+    }
+
+    .top_box_1_02>ul {
+        width: 690px;
+        height: 35px;
+        margin-top: 0px;
+        position: absolute;
+        top: 5px;
+    }
+
+    .top_box1 {
+        width: 1204px;
+        height: 100px;
+        position: relative;
+    }
+
+    .top_box1_img {
+        width: 278px;
+        height: 100px;
+    }
+
+    .top_box1_search>input {
+        width: 550px;
+        height: 50px;
+        border: 1px solid red;
+        position: absolute;
+        left: 272px;
+        bottom: 30px;
+        font-size: 22px;
+    }
+
+    .top_box1_icon {
+        width: 80px;
+        height: 52px;
+        border: 1px solid red;
+        border-left: none;
+        position: absolute;
+        bottom: 30px;
+        right: 300px;
+    }
+
+    .top_box1_icon>img {
+        margin-left: 20px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+
+    .top_box1_shopCar {
+        width: 150px;
+        height: 50px;
+        border: 1px solid red;
+        position: absolute;
+        bottom: 32px;
+        right: 78px;
+    }
+
+    .top_box1_shopCar>img {
+        margin-top: 5px;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .top_box2 {
+        width: 100%;
+        height: 48px;
+        background: red;
+        margin-top: -16px;
+    }
+
+    .top_box2_1 {
+        width: 1204px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .top_box2_1>ul {
+        width: 1204px;
+        height: 50px;
+    }
+
+    .top_box2_1>ul li {
+        width: 200px;
+        height: 50px;
+        list-style: none;
+        float: left;
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    /*头部  结束*/
+    /*底部  开始*/
+
+    .bottom {
+        width: 100%;
+        height: 385px;
+        background: #EEEEEE;
+    }
+
+    .bottom_box1 {
+        width: 1200px;
+        height: 255px;
+        margin: 0 auto;
+        border-bottom: 1px solid #CCCCCC;
+    }
+
+    .bottom_box1>ul {
+        float: left;
+    }
+
+    .bottom_rowone {
+        width: 240px;
+        height: 230px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottom_rowone>li a {
+        text-decoration: none;
+        color: #9B9B9B;
+        margin-left: 50px;
+    }
+
+    .bottom_rowone>li {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .bottom_rowtwo {
+        width: 240px;
+        height: 230px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottom_rowtwo>li a {
+        text-decoration: none;
+        color: #9B9B9B;
+        margin-left: 50px;
+    }
+
+    .bottom_rowtwo>li {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .bottom_rowthree {
+        width: 240px;
+        height: 230px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottom_rowthree>li a {
+        text-decoration: none;
+        color: #9B9B9B;
+        margin-left: 50px;
+    }
+
+    .bottom_rowthree>li {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .bottom_rowfour {
+        width: 240px;
+        height: 230px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottom_rowfour>li a {
+        text-decoration: none;
+        color: #9B9B9B;
+        margin-left: 50px;
+    }
+
+    .bottom_rowfour>li {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .bottom_box2 {
+        width: 648px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .bottom_box2>li {
+        list-style: none;
+        float: left;
+        width: 90px;
+        height: 22px;
+        margin-top: 8px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .bottom_box2>li a {
+        text-decoration: none;
+        color: #767676;
+    }
+
+    .bottom_box2_lis1 {
+        border-right: 2px solid #686868;
+    }
+
+    .bottom_img {
+        margin: 0 auto;
+        width: 830px;
+    }
+    iframe{
+	height: 1000px;
+	border: none;
+	/*flex:1;*/
+}
+    /*底部  结束*/
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top_box">
+            <div class="top_box_1">
+                <div class="top_box_1_01">
+                    <p>您好，欢迎来到金晨健!</p>
+                </div>
+                <div class="top_box_2">
+                    <div class="top_box_1_02">
+                        <ul class="mainTurn">
+                            <li>Hi,请登录</li>
+                            <li>免费注册</li>
+                            <li>我的订单</li>
+                            <li>会员中心</li>
+                            <li>充值中心</li>
+                            <li>客户服务</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="top_box1">
+                <div class="top_box1_img">
+                    <img src="images/head/1.png" />
+                </div>
+                <div class="top_box1_search">
+                    <input type="text" id="top_box1_txt" />
+                    <div class="top_box1_icon">
+                        <img src="images/head/2.png" />
+                    </div>
+                </div>
+                <div class="top_box1_shopCar">
+                    <img src="images/head/3.png" />
+                </div>
+            </div>
+        </div>
+        <div class="top_box2">
+            <div class="top_box2_1">
+                <ul>
+                    <li>全部商品分类</li>
+                    <li>首页</li>
+                    <li>热销活动</li>
+                    <li>新品专区</li>
+                    <li>精选专区</li>
+                    <li>折扣专区</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 中间注册部分 -->
+    <iframe id="iframe" src="lsy_order.html" style="width:100%"></iframe>
+    <script>
+    </script>
+    <!--底部  开始-->
+    <div class="bottom">
+        <div class="bottom_box1">
+            <ul class="bottom_rowone">
+                <li><a href="#">支付方式</a></li>
+                <li><a href="#">货到付款</a></li>
+                <li><a href="#">在线支付</a></li>
+                <li><a href="#">分期付款</a></li>
+                <li><a href="#">邮局汇款</a></li>
+                <li><a href="#">公司转账</a></li>
+            </ul>
+            <ul class="bottom_rowtwo">
+                <li><a href="#">售后服务</a></li>
+                <li><a href="#">退换货政策</a></li>
+                <li><a href="#">退换货流程</a></li>
+                <li><a href="#">购买延保服务</a></li>
+                <li><a href="#">退款说明</a></li>
+                <li><a href="#">退换货申请</a></li>
+                <li><a href="#">维修/保养</a></li>
+            </ul>
+            <ul class="bottom_rowthree">
+                <li><a href="#">购物指南</a></li>
+                <li><a href="#">导购演示</a></li>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="#">会员等级</a></li>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">品牌大全</a></li>
+            </ul>
+            <ul class="bottom_rowfour">
+                <li><a href="#">物流配送</a></li>
+                <li><a href="#">免运费政策</a></li>
+                <li><a href="#">配送服务承诺</a></li>
+                <li><a href="#">签收验货</a></li>
+                <li><a href="#">物流查询</a></li>
+            </ul>
+            <ul class="bottom_rowfive">
+                <img src="images/bottom/1.jpg" />
+            </ul>
+        </div>
+        <ul class="bottom_box2">
+            <li class="bottom_box2_lis1"><a href="#">关于我们</a></li>
+            <li class="bottom_box2_lis1"><a href="#">联系我们</a></li>
+            <li class="bottom_box2_lis1"><a href="#">联系客服</a></li>
+            <li class="bottom_box2_lis1"><a href="#">合作招商</a></li>
+            <li class="bottom_box2_lis1"><a href="#">友情链接</a></li>
+            <li class="bottom_box2_lis1"><a href="#">隐私政策</a></li>
+            <li><a href="#">帮助中心</a></li>
+        </ul>
+        <div class="bottom_img">
+            <img src="images/bottom/2.jpg" height="88" />
+        </div>
+    </div>
+    <!--底部  结束-->
+    <script src="http://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../skip.js"></script>
+    <!-- <script src="../lycar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lsy_order.js" type="text/javascript" charset="utf-8"></script> -->
+    <script type="text/javascript">
+    document.querySelector('iframe').contentWindow.onload=function() {
+        let len = document.querySelector('iframe').contentWindow.document.documentElement.clientHeight;
+        console.log(len)
+        document.querySelector('iframe').style.height = len+'px';
+    }
+    $('.top_box2_1').find('li').on('click', function() {
+        localStorage.TiaoZhuan = $(this).index();
+        sendMsg($(this).index())
+    })
+    var sendMsg = function(dat) {
+        var iframeWindow = document.getElementById('iframe').contentWindow;
+        iframeWindow.postMessage(dat, "*")
+        // window.opener.
+    }
+    </script>
+</body>
+
+</html>

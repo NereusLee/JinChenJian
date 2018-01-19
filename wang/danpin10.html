@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    <style type="text/css">body,
+    div,
+    ol,
+    ul,
+    li,
+    dl,
+    dt,
+    dd,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    form,
+    fieldset,
+    a,
+    legend,
+    input,
+    button {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        width: 1240px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top {
+        width: 100%;
+        height: 185px;
+    }
+
+    .top_box {
+        width: 1204px;
+        height: 135px;
+        margin: 0 auto;
+    }
+
+    .top_box_1 {
+        width: 1204px;
+        height: 35px;
+        border: 1px solid darkgray;
+        background: #EEEEEE;
+        position: relative;
+    }
+
+    .top_box_1_01 {
+        width: 270px;
+        height: 35px;
+    }
+
+    .top_box_1_01>p {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .top_box_1_02 {
+        width: 690px;
+        height: 35px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .top_box_1_02>ul li {
+        list-style: none;
+        float: left;
+        width: 115px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .top_box_1_02>ul li:nth-of-type(1) {
+        color: red;
+    }
+
+    .top_box_1_02>ul {
+        width: 690px;
+        height: 35px;
+        margin-top: 0px;
+        position: absolute;
+        top: 5px;
+    }
+
+    .top_box1 {
+        width: 1204px;
+        height: 100px;
+        position: relative;
+    }
+
+    .top_box1_img {
+        width: 278px;
+        height: 100px;
+    }
+
+    .top_box1_search>input {
+        width: 550px;
+        height: 50px;
+        border: 1px solid red;
+        position: absolute;
+        left: 272px;
+        bottom: 30px;
+        font-size: 22px;
+    }
+
+    .top_box1_icon {
+        width: 80px;
+        height: 52px;
+        border: 1px solid red;
+        border-left: none;
+        position: absolute;
+        bottom: 30px;
+        right: 300px;
+    }
+
+    .top_box1_icon>img {
+        margin-left: 20px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+
+    .top_box1_shopCar {
+        width: 150px;
+        height: 50px;
+        border: 1px solid red;
+        position: absolute;
+        bottom: 32px;
+        right: 78px;
+    }
+
+    .top_box1_shopCar>img {
+        margin-top: 5px;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .top_box2 {
+        width: 100%;
+        height: 48px;
+        background: red;
+        margin-top: -10px;
+    }
+
+    .top_box2_1 {
+        width: 1204px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .top_box2_1>ul {
+        width: 1204px;
+        height: 50px;
+    }
+
+    .top_box2_1>ul li {
+        width: 200px;
+        height: 50px;
+        list-style: none;
+        float: left;
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .quanbu1234 {
+        width: 1204px;
+        height: 700px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .wangdaohang {
+        width: 500px;
+        height: 30px;
+        background: yellow;
+        position: absolute;
+        top: 165px;
+    }
+
+    .wangdaohang>li {
+        list-style: none;
+        float: left;
+    }
+
+    .wangdatu {
+        width: 500px;
+        height: 500px;
+
+        position: relative;
+        top: 10px;
+    }
+
+    .wangdatu_1>img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .wangdatu_2 {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .wangxiaotu {
+        width: 501px;
+        height: 100px;
+        /*border: 1px solid red;
+			position: relative;
+			top: 10px;*/
+    }
+
+    .wangxiaotu>img {
+        width: 150px;
+        height: 100px;
+        margin-left: 15px;
+        float: left;
+    }
+
+    #wangfenxiang {
+        width: 130px;
+        height: 30px;
+        position: relative;
+        left: 280px;
+        top: -20px;
+    }
+
+    #wangfenxiang>button {
+        width: 25px;
+        height: 25px;
+        border: none;
+    }
+
+    #wangfenxiang_1 {
+        background: url(wangimg/fenxiang.jpg) -2px 0px;
+    }
+
+    #wangfenxiang_2 {
+        background: url(wangimg/xingxing.jpg) -1px 5px;
+    }
+
+    .wangxiangqing {
+        width: 650px;
+        height: 670px;
+        border: 1px solid red;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+
+    .wangxiangqing>.wangxiangqing_nr {
+        width: 650px;
+        height: 50px;
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .wangjiage {
+        width: 650px;
+        height: 140px;
+        background: #efefef;
+    }
+
+    .wangjiage>ul>li {
+        margin: 5px auto;
+        list-style: none;
+        position: relative;
+        width: 600px;
+        height: 20px;
+    }
+
+    .wangjiage>ul>li>input {
+        width: 150px;
+        height: 20px;
+    }
+
+    .jiage_1 {
+        width: 100px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        left: 70px;
+    }
+
+    #jiage_2 {
+        position: absolute;
+        top: 0;
+        left: 70px;
+    }
+
+    #jiage_3 {
+        position: absolute;
+        top: 0;
+        left: 70px;
+    }
+
+    #jiage_3_a {
+        position: absolute;
+        top: 0;
+        left: 250px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    #jiage_4 {
+        border: none;
+        color: red;
+        background: #Fff;
+        font-size: 18px;
+    }
+
+    #jiage_5 {
+        width: 640px;
+        height: 0px;
+        border: 1px solid #efefef;
+    }
+
+    #jiage_6 {
+        width: 450px;
+        height: 100px;
+        /*border: 1px solid red;*/
+        position: absolute;
+        right: 50px;
+        top: 300px;
+    }
+
+    #jiage_6>li {
+        float: left;
+        margin-right: 30px;
+        list-style: none;
+    }
+
+    #jiage_6>img {
+        width: 150px;
+        height: 100px;
+    }
+
+    #jiage_7 {
+        width: 640px;
+        height: 0px;
+        border: 1px solid #efefef;
+        position: absolute;
+        top: 430px;
+    }
+
+    #jiage_8 {
+        position: absolute;
+        top: 450px;
+    }
+
+    #jiage_9 {
+        width: 450px;
+        height: 100px;
+        /*border: 1px solid red;*/
+        position: absolute;
+        right: 50px;
+        top: 450px;
+    }
+
+    #jiage_9>li {
+        list-style: none;
+    }
+
+    #jiage_9>li>button {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #aaa;
+        background: #fff;
+        margin-right: 10px;
+    }
+
+    #jiage_10 {
+        width: 640px;
+        height: 0px;
+        border: 1px solid #efefef;
+        position: absolute;
+        top: 570px;
+    }
+
+    #jiage_11 {
+        position: absolute;
+        top: 590px;
+    }
+
+    #jiage_12 {
+        width: 60px;
+        height: 40px;
+        position: absolute;
+        top: 600px;
+        left: 120px;
+    }
+
+    #jiage_13 {
+        width: 25px;
+        height: 23px;
+        position: absolute;
+        top: 600px;
+        left: 180px;
+    }
+
+    #jiage_14 {
+        width: 25px;
+        height: 23px;
+        position: absolute;
+        top: 623px;
+        left: 180px;
+    }
+
+    #jiage_15 {
+        width: 90px;
+        height: 40px;
+        position: absolute;
+        top: 600px;
+        left: 270px;
+        background: url(wangimg/gouma.jpg) -5px 0px;
+    }
+
+    #jiage_16 {
+        width: 110px;
+        height: 40px;
+        position: absolute;
+        top: 600px;
+        left: 380px;
+        background: url(wangimg/gouwuche.jpg);
+    }
+
+    #jiage_17 {
+        position: absolute;
+        top: 645px;
+        left: 120px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    #wangbox1 {
+        width: 1240px;
+        height: 30px;
+        margin: 0 auto;
+        background: #efefef;
+        position: relative;
+        top: 170px;
+        left: 0px;
+    }
+
+    #wangbox1_1 {
+        width: 80px;
+        height: 30px;
+        background: red;
+        color: #fff;
+        border: none;
+    }
+
+    #wangbox2 {
+        height: 250px;
+        width: 1100px;
+        border: 1px solid #efefef;
+        border-top: 1px solid red;
+
+        position: relative;
+        top: 170px;
+    }
+
+    #wangbox2_1 {
+        width: 50px;
+        height: 250px;
+        border: none;
+        position: absolute;
+        left: 230px;
+        background: #fff;
+    }
+
+    #wangbox2_img1 {
+        width: 230px;
+        height: 230px;
+    }
+
+    #wangbox2_img1>img {
+        width: 230px;
+        height: 230px;
+    }
+
+    #wangbox2_ul {
+        height: 180px;
+        width: 570px;
+        margin-left: 30px;
+        position: relative;
+        left: 250px;
+        top: -210px;
+    }
+
+    #wangbox2_ul>li {
+        width: 570px;
+        height: 175px;
+        border: 1px solid #efefef;
+        margin-left: 10px;
+        float: left;
+        list-style: none;
+    }
+
+    #wangbox2_ul>li>img {
+        width: 175px;
+        height: 175px;
+        border: 1px solid #efefef;
+        margin-left: 10px;
+        float: left;
+    }
+
+    #wangbox2_ul2 {
+        width: 590px;
+        height: 50px;
+        position: relative;
+        top: -210px;
+        left: 290px;
+    }
+    /*#wangbox2_ul2>li{
+			width: 190px;
+			height: 50px;
+			float: left;
+			list-style: none;
+		}*/
+
+    #wangbox2>#wangbox2_ul2>input {
+        width: 22px;
+        height: 20px;
+    }
+
+    #wangbox2_ul3 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        right: 0px;
+        top: 50px;
+    }
+
+    #wangbox2_ul3>li {
+        list-style: none;
+        margin-top: 20px;
+    }
+
+    #wangbox2_ul3_1 {
+        width: 60px;
+        height: 20px;
+        color: red;
+        background: #fff;
+        border: none;
+        font-size: 18px;
+    }
+
+    #wangbox2_ul3_2 {
+        width: 100px;
+        height: 30px;
+        background: url(wangimg/tianjia.png) -5px -5px;
+    }
+
+    #suoyou {
+        position: relative;
+    }
+
+    #wangbox3 {
+        width: 160px;
+        height: 30px;
+        border: 1px solid #efefef;
+        position: relative;
+        top: 200px;
+    }
+
+    #wangbox3>ul>li>button {
+        width: 80px;
+        height: 30px;
+        background: light-grey;
+        color: black;
+        float: left;
+        border: none;
+    }
+
+    #wangbox3>ul {
+        position: relative;
+        top: -160px;
+    }
+
+    #wangbox3>ul>li {
+        list-style: none;
+    }
+
+    #wangbox3_1 {
+        width: 160px;
+        height: 1200px;
+        border: 1px solid #efefef;
+        position: relative;
+        top: 200px;
+        left: -595px;
+        overflow: hidden;
+    }
+
+    #wangbox3_1>img {
+        width: 160px;
+        height: 200px;
+    }
+
+    #wangbox3_2 {
+        width: 160px;
+        height: 1200px;
+        border: 1px solid #efefef;
+        position: relative;
+        top: 200px;
+        left: -595px;
+        overflow: hidden;
+        display: none;
+    }
+
+    #wangbox3_2>img {
+        width: 160px;
+        height: 200px;
+    }
+
+    #wangbox4 {
+        width: 900px;
+        height: 30px;
+        background: light-gray;
+        /*border-bottom: 1px solid red;*/
+        position: absolute;
+        top: 15%;
+        left: 20%;
+    }
+
+    #wangbox4>button {
+        width: 100px;
+        height: 30px;
+        margin-right: 20px;
+        border: none;
+    }
+
+    #wangbox5 {
+        width: 1000px;
+        height: 1250px;
+        border: 1px solid red;
+        margin: 30px auto;
+        position: absolute;
+        top: 15%;
+        left: 20%;
+    }
+
+    #wangbox5_1 {
+        width: 1000px;
+        height: 150px;
+        /*position: relative;
+			top: 100px;*/
+    }
+
+    #wangbox5_1_1 {
+        width: 60px;
+        height: 30px;
+        border: none;
+        background: #fff;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-size: 16px;
+    }
+
+    #wangbox5_1_2 {
+        width: 100px;
+        height: 50px;
+        border: none;
+        background: url(wangimg/haoping.png);
+        position: absolute;
+        top: 70px;
+        left: 30px;
+    }
+
+    #wangbox5_2 {
+        width: 1000px;
+        height: 30px;
+        /*position: absolute;*/
+        background: gray;
+    }
+
+    #wangbox5_2>button {
+        border: none;
+        background: gray;
+        margin-right: 60px;
+    }
+
+    #wangbox5_3_1 {
+        width: 900px;
+        height: 30px;
+        position: absolute;
+        bottom: 0px;
+        margin: 0 auto;
+    }
+
+    #wangbox5_3_1>button {
+        margin-right: 10px;
+        margin-left: 15px;
+        border: none;
+        background: #fff;
+    }
+
+    #wangbox6 {
+        width: 1000px;
+        height: 1250px;
+        border: 1px solid red;
+        margin: 30px auto;
+        position: absolute;
+        top: 135%;
+        left: 30%;
+        overflow: hidden;
+        display: none;
+    }
+
+    #wangbox6>img {
+        width: 1000px;
+    }
+
+    #wangbox9 {
+        width: 1200px;
+        height: 40px;
+        background: url(wangimg/1.jpg);
+        position: relative;
+        top: 250px;
+    }
+
+    .like_rowone {
+        width: 1200px;
+        height: 300px;
+        margin: 250px auto 0px;
+        border-bottom: 1px solid #EEEEEE;
+        /*position: relative;
+	top: -1100px;*/
+    }
+
+    .like_rowone>li {
+        list-style: none;
+        width: 239px;
+        height: 300px;
+    }
+
+    .like_rowone_lis1 {
+        border-right: 1px solid #EEEEEE;
+        float: left;
+    }
+
+    .like_rowone_lis1>h4 {
+        font-weight: 400;
+        margin-left: 5px;
+    }
+
+    .like_rowone_lis1>p {
+        color: red;
+        font-weight: 600;
+        font-size: 22px;
+        margin-top: -12px;
+        margin-left: 80px;
+    }
+
+    .like_rowone_lis2>h4 {
+        font-weight: 400;
+        margin-left: 5px;
+    }
+
+    .like_rowone_lis2>p {
+        color: red;
+        font-weight: 600;
+        font-size: 22px;
+        margin-top: -12px;
+        margin-left: 80px;
+    }
+
+    .like_rowone_lis2 {
+        float: left;
+    }
+
+    #wangbox10 {
+        width: 1200px;
+        height: 246px;
+        background: url(wangimg/paobu.png);
+        /*position: relative;
+	bottom: 1200px;*/
+    }
+
+    #wangbox11 {
+        width: 1200px;
+        height: 150px;
+        background: #eee;
+        overflow: hidden;
+        /*position: absolute;
+	top:3000px;*/
+    }
+
+    #wangbox11>img {
+        margin-top: 20px;
+    }
+
+    #wangbox11>button {
+        width: 150px;
+        height: 100px;
+        border: none;
+        margin-left: 10px;
+        color: red;
+        font-size: 30px;
+        background: #eee;
+    }
+
+    .bottom {
+        width: 1200px;
+        height: 385px;
+        background: #EEEEEE;
+        /*position:absolute;*/
+        /*margin:auto;*/
+        /*top: 3400px;*/
+    }
+
+    .bottom_box1 {
+        width: 1200px;
+        height: 255px;
+        margin: 0 auto;
+        border-bottom: 1px solid #CCCCCC;
+    }
+
+    .bottom_box1>ul {
+        float: left;
+    }
+
+    .bottom_rowone {
+        width: 240px;
+        height: 230px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottom_rowone>li a {
+        text-decoration: none;
+        color: #9B9B9B;
+        margin-left: 50px;
+    }
+
+    .bottom_rowone>li {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .bottom_rowtwo {
+        width: 240px;
+        height: 230px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottom_rowtwo>li a {
+        text-decoration: none;
+        color: #9B9B9B;
+        margin-left: 50px;
+    }
+
+    .bottom_rowtwo>li {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .bottom_rowthree {
+        width: 240px;
+        height: 230px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottom_rowthree>li a {
+        text-decoration: none;
+        color: #9B9B9B;
+        margin-left: 50px;
+    }
+
+    .bottom_rowthree>li {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .bottom_rowfour {
+        width: 240px;
+        height: 230px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottom_rowfour>li a {
+        text-decoration: none;
+        color: #9B9B9B;
+        margin-left: 50px;
+    }
+
+    .bottom_rowfour>li {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .bottom_box2 {
+        width: 648px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .bottom_box2>li {
+        list-style: none;
+        float: left;
+        width: 90px;
+        height: 22px;
+        margin-top: 8px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .bottom_box2>li a {
+        text-decoration: none;
+        color: #767676;
+    }
+
+    .bottom_box2_lis1 {
+        border-right: 2px solid #686868;
+    }
+
+    .bottom_img {
+        margin: 0 auto;
+        width: 830px;
+    }
+
+    #pingjia>li {
+        list-style: none;
+        width: 1000px;
+        height: 100px;
+        font-size: 16px;
+        border: 1px solid #aaa;
+    }
+
+    #pingjia>li>img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    #pingjia>li>p {
+        width: 900px;
+        position: relative;
+        top: -80px;
+        left: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top_box">
+            <div class="top_box_1">
+                <div class="top_box_1_01">
+                    <p>您好，欢迎来到金晨健!</p>
+                </div>
+                <div class="top_box_2">
+                    <div class="top_box_1_02">
+                        <ul>
+                            <li>Hi,请登录</li>
+                            <li>免费注册</li>
+                            <li>我的订单</li>
+                            <li>会员中心</li>
+                            <li>充值中心</li>
+                            <li>客户服务</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="top_box1">
+                <div class="top_box1_img">
+                    <img src="wangimg/1.png" />
+                </div>
+                <div class="top_box1_search">
+                    <input type="text" id="top_box1_txt" />
+                    <div class="top_box1_icon">
+                        <img src="wangimg/2.png" />
+                    </div>
+                </div>
+                <div class="top_box1_shopCar">
+                    <img src="wangimg/3.png" />
+                </div>
+            </div>
+        </div>
+        <div class="top_box2">
+            <div class="top_box2_1">
+                <ul>
+                    <li>全部商品分类</li>
+                    <li>首页</li>
+                    <li>热销活动</li>
+                    <li>新品专区</li>
+                    <li>精选专区</li>
+                    <li>折扣专区</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="quanbu1234">
+        <div>
+            <ul class="wangdaohang">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="wangdatu">
+            <span class="wangdatu_1"></span>
+            <img src="wangimg/sousuo.jpg" class="wangdatu_2">
+        </div>
+        <div class="wangxiaotu">
+        </div>
+        <p>商品编号 01011010 </p>
+        <div id="wangfenxiang">
+            <button id="wangfenxiang_1"></button>分享
+            <button id="wangfenxiang_2"></button>关注
+        </div>
+        <div class="wangxiangqing">
+            <span class="wangxiangqing_nr"></span>
+            <div class="wangjiage">
+                <ul>
+                    <li></li>
+                    <li>
+                        <p>参考价</p> <span class="jiage_1"></span></li>
+                    <li>
+                        <p>促销价</p> <span class="jiage_1"></span></li>
+                    <li>
+                        <p>活动</p> <span class="jiage_1"></span><a href="#" id="jiage_3_a">查看详情＞＞</a></li>
+                    <li>
+                        <p>月销量 1000 &nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 评价 10000 </p>
+                    </li>
+                </ul>
+            </div>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;配送至 &nbsp;&nbsp;&nbsp; 北京市朝阳区******&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;有货&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;运费0.00</P>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由
+                <button id="jiage_4">北京</button>发货</P>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00kg</p>
+            <div id="jiage_5"></div>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选择颜色</p>
+            <ul id="jiage_6">
+            </ul>
+            <div id="jiage_7"></div>
+            <P id="jiage_8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选择尺码</P>
+            <ul id="jiage_9">
+                <li></li>
+            </ul>
+            <div id="jiage_10"></div>
+            <p id="jiage_11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选择数量</p>
+            <input type=text value=1 id="jiage_12">
+            <button id="jiage_13">∧</button>
+            <button id="jiage_14">∨</button>
+            <button id="jiage_15"><a href=""></a></button>
+            <button id="jiage_16"><a href=""></a></button>
+            <a href="#" id="jiage_17">库存1025件</a>
+        </div>
+    </div>
+    <div id="wangbox1">
+        <button id="wangbox1_1">推荐搭配</button>
+    </div>
+    <div id="wangbox2">
+        <span src="" id="wangbox2_img1"></span>
+        <button id="wangbox2_1">＋</button>
+        <ul id="wangbox2_ul">
+            <li></li>
+        </ul>
+        <div id="wangbox2_ul2">
+            <input type="checkbox" name="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价格￥55元
+            <input type="checkbox" name="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价格￥55元
+            <input type="checkbox" name="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价格￥55元
+        </div>
+        <ul id="wangbox2_ul3">
+            <li>已选择一个配件</li>
+            <li>套餐价:
+                <button id="wangbox2_ul3_1">￥1500.00</button>
+            </li>
+            <li>已优惠 ￥55.00</li>
+            <li>
+                <button id="wangbox2_ul3_2"></button>
+            </li>
+        </ul>
+    </div>
+    <div id="suoyou">
+        <div id="wangbox3">
+            <ul>
+                <li>
+                    <button class="btn9">店铺热销</button>
+                </li>
+                <li>
+                    <button class="btn10">店铺热销</button>
+                </li>
+            </ul>
+        </div>
+        <div id="wangbox3_1">
+        </div>
+        <div id="wangbox3_2">
+        </div>
+        <div id="wangbox4">
+            <button>商品详情</button>
+            <button>规格与参数</button>
+            <button>售后保障</button>
+            <button>商品评价(1001)</button>
+        </div>
+        <div id="wangbox5">
+            <div id="wangbox5_1">
+                <button id="wangbox5_1_1">好评度:</button>
+                <button id="wangbox5_1_2"></button>
+            </div>
+            <div id="wangbox5_2">
+                <button>全部评价(1001)</button>
+                <button>晒图(99)</button>
+                <button>好评(77)</button>
+                <button>追评(101)</button>
+                <button>中评(10)</button>
+                <button>差评(0)</button>
+                <button id="wangbox5_2_1">推荐排序Ｖ</button>
+            </div>
+            <ul id="pingjia">
+            </ul>
+            <div id="wangbox5_3_1">
+                <button>〈上一页</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>...</button>
+                <button>101</button>
+                <button>下一页〉</button>
+                <button>共101页</button>
+                到第
+                <input type="text" name="" value="3">页
+                <button>确定</button>
+            </div>
+        </div>
+    </div>
+    <div id="wangbox6"></div>
+    <!-- <div id="wangbox7"></div>
+		<div id="wangbox8"></div> -->
+    <div id="wangbox9"></div>
+    <ul class="like_rowone">
+        <li class="like_rowone_lis1">
+            <img src="wangimg/2.jpg" height="188" />
+            <h4>SUUNTO松拓GPS户外多功能手表</h4>
+            <p>￥399</p>
+        </li>
+        <li class="like_rowone_lis1">
+            <img src="wangimg/3.jpg" />
+            <h4>SUUNTO松拓GPS户外多功能手表</h4>
+            <p>￥399</p>
+        </li>
+        <li class="like_rowone_lis1">
+            <img src="wangimg/4.jpg" height="191" />
+            <h4>SUUNTO松拓GPS户外多功能手表</h4>
+            <p>￥399</p>
+        </li>
+        <li class="like_rowone_lis1">
+            <img src="wangimg/5.jpg" height="191" />
+            <h4>SUUNTO松拓GPS户外多功能手表</h4>
+            <p>￥399</p>
+        </li>
+        <li class="like_rowone_lis2">
+            <img src="wangimg/6.jpg" height="191" />
+            <h4>SUUNTO松拓GPS户外多功能手表</h4>
+            <p>￥399</p>
+        </li>
+    </ul>
+    <div id="wangbox10">
+    </div>
+    <div id="wangbox11">
+        <img src="wangimg/di1.png">
+        <button>正品保障</button>
+        <img src="wangimg/di2.png">
+        <button>售后无忧</button>
+        <img src="wangimg/di3.png">
+        <button>天天低价</button>
+        <img src="wangimg/di4.png">
+        <button>急速配送</button>
+    </div>
+    <div class="bottom">
+        <div class="bottom_box1">
+            <ul class="bottom_rowone">
+                <li><a href="#">支付方式</a></li>
+                <li><a href="#">货到付款</a></li>
+                <li><a href="#">在线支付</a></li>
+                <li><a href="#">分期付款</a></li>
+                <li><a href="#">邮局汇款</a></li>
+                <li><a href="#">公司转账</a></li>
+            </ul>
+            <ul class="bottom_rowtwo">
+                <li><a href="#">售后服务</a></li>
+                <li><a href="#">退换货政策</a></li>
+                <li><a href="#">退换货流程</a></li>
+                <li><a href="#">购买延保服务</a></li>
+                <li><a href="#">退款说明</a></li>
+                <li><a href="#">退换货申请</a></li>
+                <li><a href="#">维修/保养</a></li>
+            </ul>
+            <ul class="bottom_rowthree">
+                <li><a href="#">购物指南</a></li>
+                <li><a href="#">导购演示</a></li>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="#">会员等级</a></li>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">品牌大全</a></li>
+            </ul>
+            <ul class="bottom_rowfour">
+                <li><a href="#">物流配送</a></li>
+                <li><a href="#">免运费政策</a></li>
+                <li><a href="#">配送服务承诺</a></li>
+                <li><a href="#">签收验货</a></li>
+                <li><a href="#">物流查询</a></li>
+            </ul>
+            <ul class="bottom_rowfive">
+                <img src="wangimg/bottom/1.jpg" />
+            </ul>
+        </div>
+        <ul class="bottom_box2">
+            <li class="bottom_box2_lis1"><a href="#">关于我们</a></li>
+            <li class="bottom_box2_lis1"><a href="#">联系我们</a></li>
+            <li class="bottom_box2_lis1"><a href="#">联系客服</a></li>
+            <li class="bottom_box2_lis1"><a href="#">合作招商</a></li>
+            <li class="bottom_box2_lis1"><a href="#">友情链接</a></li>
+            <li class="bottom_box2_lis1"><a href="#">隐私政策</a></li>
+            <li><a href="#">帮助中心</a></li>
+        </ul>
+        <div class="bottom_img">
+            <img src="wangimg/bottom/2.jpg" height="88" />
+        </div>
+    </div>
+
+
+
+
+    
+    <script src="http://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="quanbu.js"></script>
+    <script type="text/javascript" src="pingjia.js"></script>
+    <script type="text/javascript" src='../lycar.js'></script>
+    <script type="text/javascript" src='../skip.js'></script>
+    <script type="text/javascript">
+    for (var i = 0; i < 10; i++) {
+        var lis = $('<li></li>');
+        var p = $('<p>');
+        p.html(pingjia[Math.round(Math.random() * 9 + 1)]);
+        lis.append('<img src=huge/' + Math.round(Math.random() * 3 + 1) + '.jpg>');
+        lis.append(p);
+        $('#pingjia').append(lis);
+    }
+    for (var i = 0; i < 6; i++) {
+        $('#wangbox3_1').append('<img src=rexiao/' + Math.round(Math.random() * 9 + 1) + '.png>');
+        $('#wangbox3_2').append('<img src=rexiao/' + Math.round(Math.random() * 9 + 1) + '.png>');
+
+    }
+    for (var i = 0; i < 7; i++) {
+        $('#jiage_9 li').append('<button>' + Math.round(Math.random() * 15 + 30) + '</button>');
+    }
+    $('.btn9').click(function() {
+
+        $('#wangbox3_1').css('display', 'block');
+        $('#wangbox3_2').css('display', 'none');
+    })
+    $('.btn10').click(function() {
+
+        $('#wangbox3_2').css('display', 'block');
+        $('#wangbox3_1').css('display', 'none');
+    })
+    $('#wangbox4>button').eq(0).click(function() {
+        $('#wangbox5').css('display', 'none');
+        $('#wangbox6').css('display', 'block');
+    })
+    $('#wangbox4>button').eq(3).click(function() {
+        $('#wangbox6').css('display', 'none');
+        $('#wangbox5').css('display', 'block');
+    })
+    $('#jiage_13').click(function() {
+        var n = $('#jiage_12').val();
+        var m = Number(n);
+        if (m == 1) {
+            $('#jiage_12').val('1')
+        } else {
+            console.log($('#jiage_12').val())
+            $('#jiage_12').val(m - 1);
+        }
+    })
+    $('#jiage_14').click(function() {
+        var n = $('#jiage_12').val();
+        var m = Number(n);
+        $('#jiage_12').val(m + 1);
+
+
+    })
+
+    $('#wangbox2_ul2').on('click', function() {
+        console.log('1');
+        $(this).css('background', 'url(wangimg/gouxuan.png)')
+    })
+
+    ;
+    (function($) {
+        $.fn.extend({
+            wangAdd: function() {
+                //三个参数  表单选项,文本或图片,数量
+                var opt = arguments;
+                var that = $(this)
+                $.ajax({
+                    type: 'get',
+                    url: 'getData1.php?flag=' + opt[0],
+                    dataType: 'json'
+                }).done(function(dat) {
+                    // console.log(dat)
+                    // $,each(data,function(k,v){
+
+                    // })
+                    var data = JSON.stringify(dat)
+
+                    if (opt[1] == 1) { //传图片
+                        // var jso=JSON.parse(data)
+                        var img = data.replace(/\\\//g, '/').match(/http[^\"\"\,]+jpg/g);
+                        // console.log(jso)
+
+                        for (i = 0; i < opt[2]; i++) {
+                            // console.log(img[i])
+                            var im = $('<img src="' + img[0] + '">');
+                            that.append(im);
+                        }
+                    } else if (opt[1] == 0) { //传标题
+                        var word = data.match(/"goodsTitle":".*[^"\}\]]/)[0].replace(/"goodsTitle":"/, '');
+                        // console.log(word)
+                        that.append('<p>' + word + '</p>')
+                    } else if (opt[1] = 2) {
+                        var jiage = data.match(/"goodsPrice":".*[^"\}\]]/)[0].replace(/"goodsPrice":"/, '');
+                        // console.log(jiage)
+                        that.append('<p>' + jiage + '</p>')
+                    }
+                });
+            },
+            ffa: function() {
+                console.log($(this))
+            }
+        })
+    })($)
+
+    window.onload = function() {
+        $('.wangxiaotu').wangAdd(3, 1, 3) //小图
+        $('.wangdatu_1').wangAdd(2, 1, 1) //大图
+        $('.wangxiangqing_nr').wangAdd(0, 0, 1) //标题
+        $('.jiage_1').wangAdd(1, 2, 1) //价格
+        $('#jiage_6').wangAdd(4, 1, 3) //颜色
+        $('#wangbox6').wangAdd(5, 1, 2) //商品详情
+        $('#wangbox2_img1').wangAdd(2, 1, 1)
+        $('#wangbox2_ul li').wangAdd(3, 1, 3)
+    }
+
+
+
+    $('#jiage_16').click(function() {
+        var bigPicture = $('.wangdatu_1').children('img').attr('src');
+        var goodsTitle = $('.wangxiangqing_nr p').html();
+        var goodsPrice = $('.jiage_1 p').html();
+        $.ajax({
+            type: 'post',
+            url: 'car.php',
+            data: {
+                pic: bigPicture,
+                title: goodsTitle,
+                price: goodsPrice,
+                flag: 1
+            },
+
+        }).done(function(data) {
+            alert(data)
+        })
+    })
+
+    $('#jiage_15').on('click', function() {
+        window.open('http://nereus.gotoip2.com/jin/lsy/lsy_order.html')
+    })
+    </script>
+</body>
+
+</html>

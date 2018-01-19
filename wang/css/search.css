@@ -1,0 +1,37 @@
+		#wangfenlei>#u{
+			list-style:none;
+		}
+		#wangfenlei9>#u li{
+			width: 210px;
+		    height: 300px;
+		    font-size: 14px;
+		    color: #333;
+		    line-height: 20px;
+		    overflow: hidden;
+		    margin: 12px auto;
+		    float: left;
+		    margin:10px;
+		}
+		.tutu{
+			width:200px;
+			height:200px;
+		}
+		.tutu img{
+			display: block;
+			height: :200px;
+		}
+		.tutu span{
+			position: absolute;
+			top:280px;
+		}
+		.ly_product{
+			overflow: hidden;
+			height: 60px;
+		}
+		.ly_price{
+			font-size: 22px;
+			color: rgb(255,68,0);
+		}
+		.tu_right{
+			float:right;
+		}

@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>金晨健运动商城</title>
+    <link rel="stylesheet" href="css/lsy_order.css" />
+    <link rel="stylesheet" href="css/touwei.css">
+    <style>
+    body {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shoppingCar {
+        flex: 1;
+        height: 900px;
+        overflow: auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top_box">
+            <div class="top_box_1">
+                <div class="top_box_1_01">
+                    <p>您好，欢迎来到金晨健!</p>
+                </div>
+                <div class="top_box_2">
+                    <div class="top_box_1_02">
+                        <ul class="mainTurn">
+                            <li>Hi,请登录</li>
+                            <li>免费注册</li>
+                            <li>我的订单</li>
+                            <li>会员中心</li>
+                            <li>充值中心</li>
+                            <li>客户服务</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="top_box1">
+                <div class="top_box1_img">
+                    <img src="images/head/1.png" />
+                </div>
+                <div class="top_box1_search">
+                    <input type="text" id="top_box1_txt" />
+                    <div class="top_box1_icon">
+                        <img src="images/head/2.png" />
+                    </div>
+                </div>
+                <div class="top_box1_shopCar">
+                    <img src="images/head/3.png" />
+                </div>
+            </div>
+        </div>
+        <div class="top_box2">
+            <div class="top_box2_1">
+                <ul>
+                    <li>全部商品分类</li>
+                    <li>首页</li>
+                    <li>热销活动</li>
+                    <li>新品专区</li>
+                    <li>精选专区</li>
+                    <li>折扣专区</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 中间注册部分 -->
+    <!-- <iframe id="iframe" src="lsy_order.html" style="width:100%"></iframe> -->
+       <div class="shoppingCar">
+        <!--页面主体内容-->
+            <div id="lsy_content">
+               <!--主体导航-->
+               <!--页面侧栏-->
+               <ul id="lsy_sidebar">
+                   <!--我的订单-->
+                   <li>
+                       <h4>我的订单</h4>
+                       <ul class="lsy_ordernav">
+                           <li>全部订单</li>
+                           <li>待付款</li>
+                           <li>待发货</li>
+                           <li>待收货</li>
+                           <li>待评价</li>
+                           <li>退款</li>
+                       </ul>
+                   </li>
+                   <!--我的购物车-->
+                   <li>
+                       <h4>我的购物车</h4>
+                       <ul class="lsy_shopcartnav">
+                           <li>全部商品</li>
+                           <li>已下架商品</li>
+                       </ul>
+                   </li>
+                   <!--我的关注-->
+                   <li>
+                       <h4>我的关注</h4>
+                       <ul class="lsy_attentionnav">
+                           <li>我的积分</li>
+                           <li>我的优惠信息</li>
+                       </ul>
+                   </li>
+                   <!--账户设置-->
+                   <li>
+                       <h4>账户设置</h4>
+                       <ul class="lsy_usernav">
+                           <li>个人信息</li>
+                           <li>账户安全</li>
+                           <li>账号绑定</li>
+                           <li>收货地址管理</li>
+                       </ul>
+                   </li>
+                   <!--客户服务-->
+                   <li>
+                       <h4>客户服务</h4>
+                       <ul class="lsy_customer">
+                           <li>意见建议</li>
+                           <li>我的问答</li>
+                           <li>举报中心</li>
+                       </ul>
+                   </li>
+               </ul>
+               <!--内容详情-->
+               <div id="lsy_main">
+                   <!--我的订单-->
+                   <div class="lsy_order">
+                       <h4>
+                           <span>首页</span>
+                           <span>></span>                          
+                           <span>会员中心</span>
+                           <span>></span>
+                           <span>我的订单</span>
+                       </h4>
+                       <!--我的订单分页内容-->
+                       <ul class="lsy_ordercontent">
+                           <!--全部订单内容-->
+                           <li class="lsy_orderAll">
+                               <!--我的订单子导航-->
+                               <ul class="lsy_ordersubnav">
+                                   <li>全部订单</li>
+                                   <li>待付款</li>
+                                   <li>待发货</li>
+                                   <li>待收货</li>
+                                   <li>待评价</li>
+                               </ul>
+                               <!--子订单导航-->
+                               <ul class="lsy_orderAllsubnav">
+                                   <li>
+                                       <input type="checkbox" name="" id="" value="" class="lsy_orderAll_Checks" />全选
+                                   </li>
+                                   <li>
+                                       我的订单
+                                   </li>
+                                   <li>
+                                       单价
+                                   </li>
+                                   <li>
+                                       数量
+                                   </li>
+                                   <li>
+                                       实付款
+                                   </li>
+                                   <li>
+                                       交易状态
+                                   </li>
+                                   <li>
+                                       操作
+                                   </li>
+                               </ul>
+                               <!--子订单内容-->
+                               <div class="lsy_orderAllwares">
+                                   <div class="lsy_orderAllware">
+                                       <!--订单商品摘要-->
+                                       <div class="lsy_orderAllwaresAbstract">
+                                           <!--订单时间<-->
+                                           <p class="lsy_orderAllwaresTime">2017-10-01 10:23:39</p>
+                                           <!--订单单号-->
+                                           <p>
+                                               订单号：<span class="lsy_orderAllwaresNumber"></span>
+                                           </p>
+                                           <!--订单收货人-->
+                                           <p>
+                                               收货人：<span class="lsy_orderAllwaresConsignee"></span>
+                                           </p>
+                                       </div>
+                                       <!--订单详细内容-->
+                                       <ul class="lsy_orderAllwaresContent">
+                                           <!--订单多选框-->
+                                           <li>
+                                               <input type="checkbox" name="" id="" value="" class="lsy_orderAllwaresCheck" />
+                                               <img src="" class="lsy_orderAllwaresImg" />
+                                           </li>
+                                           <!--商品属性-->
+                                           <li>
+                                               <h4 class="lsy_orderAllwaresName">商品名字</h4>
+                                               <p class="lsy_orderAllwaresColor">颜色:<span class="waresColor"></span></p>
+                                               <p class="lsy_orderAllwaresSize">尺码:<span class="waresSize"></span></p>
+                                           </li>
+                                           <!--商品单价-->
+                                           <li class="lsy_orderAllwaresPrice">
+                                               <p class="waresPrice">￥2000</p>
+                                               <p class="waresSale">￥1599</p>
+                                           </li>
+                                           <!--购买数量-->
+                                           <li class="lsy_orderAllwaresAmount">
+                                               <p>1</p>
+                                           </li>
+                                           <!--实际款项-->
+                                           <li class="lsy_orderAllwaresTotal">
+                                               <p>￥1599</p>
+                                           </li>
+                                           <!--交易状态-->
+                                           <li class="lsy_orderAllwaresStatus">
+                                               <p>等待付款</p>
+                                               <p>订单详情</p>
+                                           </li>
+                                           <!--交易操作-->
+                                           <li class="lsy_orderAllwaresHandle">
+                                               <p>立即付款</p>
+                                               <p>取消订单</p>
+                                           </li>
+                                       </ul>
+                                   </div>
+                                   <div class="lsy_orderAllware">
+                                       <!--订单商品摘要-->
+                                       <div class="lsy_orderAllwaresAbstract">
+                                           <!--订单时间<-->
+                                           <p class="lsy_orderAllwaresTime">2017-10-01 10:23:39</p>
+                                           <!--订单单号-->
+                                           <p>
+                                               订单号：<span class="lsy_orderAllwaresNumber"></span>
+                                           </p>
+                                           <!--订单收货人-->
+                                           <p>
+                                               收货人：<span class="lsy_orderAllwaresConsignee"></span>
+                                           </p>
+                                       </div>
+                                       <!--订单详细内容-->
+                                       <ul class="lsy_orderAllwaresContent">
+                                           <!--订单多选框-->
+                                           <li>
+                                               <input type="checkbox" name="" id="" value="" class="lsy_orderAllwaresCheck" />
+                                               <img src="" class="lsy_orderAllwaresImg" />
+                                           </li>
+                                           <!--商品属性-->
+                                           <li>
+                                               <h4 class="lsy_orderAllwaresName">商品名字</h4>
+                                               <p class="lsy_orderAllwaresColor">颜色:<span class="waresColor"></span></p>
+                                               <p class="lsy_orderAllwaresSize">尺码:<span class="waresSize"></span></p>
+                                           </li>
+                                           <!--商品单价-->
+                                           <li class="lsy_orderAllwaresPrice">
+                                               <p class="waresPrice">￥2000</p>
+                                               <p class="waresSale">￥1599</p>
+                                           </li>
+                                           <!--购买数量-->
+                                           <li class="lsy_orderAllwaresAmount">
+                                               <p>1</p>
+                                           </li>
+                                           <!--实际款项-->
+                                           <li class="lsy_orderAllwaresTotal">
+                                               <p>￥1599</p>
+                                           </li>
+                                           <!--交易状态-->
+                                           <li class="lsy_orderAllwaresStatus">
+                                               <p>等待付款</p>
+                                               <p>订单详情</p>
+                                           </li>
+                                           <!--交易操作-->
+                                           <li class="lsy_orderAllwaresHandle">
+                                               <p>立即付款</p>
+                                               <p>取消订单</p>
+                                           </li>
+                                       </ul>
+                                   </div>
+                                   <div class="lsy_orderAllware">
+                                       <!--订单商品摘要-->
+                                       <div class="lsy_orderAllwaresAbstract">
+                                           <!--订单时间<-->
+                                           <p class="lsy_orderAllwaresTime">2017-10-01 10:23:39</p>
+                                           <!--订单单号-->
+                                           <p>
+                                               订单号：<span class="lsy_orderAllwaresNumber"></span>
+                                           </p>
+                                           <!--订单收货人-->
+                                           <p>
+                                               收货人：<span class="lsy_orderAllwaresConsignee"></span>
+                                           </p>
+                                       </div>
+                                       <!--订单详细内容-->
+                                       <ul class="lsy_orderAllwaresContent">
+                                           <!--订单多选框-->
+                                           <li>
+                                               <input type="checkbox" name="" id="" value="" class="lsy_orderAllwaresCheck" />
+                                               <img src="" class="lsy_orderAllwaresImg" />
+                                           </li>
+                                           <!--商品属性-->
+                                           <li>
+                                               <h4 class="lsy_orderAllwaresName">商品名字</h4>
+                                               <p class="lsy_orderAllwaresColor">颜色:<span class="waresColor"></span></p>
+                                               <p class="lsy_orderAllwaresSize">尺码:<span class="waresSize"></span></p>
+                                           </li>
+                                           <!--商品单价-->
+                                           <li class="lsy_orderAllwaresPrice">
+                                               <p class="waresPrice">￥2000</p>
+                                               <p class="waresSale">￥1599</p>
+                                           </li>
+                                           <!--购买数量-->
+                                           <li class="lsy_orderAllwaresAmount">
+                                               <p>1</p>
+                                           </li>
+                                           <!--实际款项-->
+                                           <li class="lsy_orderAllwaresTotal">
+                                               <p>￥1599</p>
+                                           </li>
+                                           <!--交易状态-->
+                                           <li class="lsy_orderAllwaresStatus">
+                                               <p>等待付款</p>
+                                               <p>订单详情</p>
+                                           </li>
+                                           <!--交易操作-->
+                                           <li class="lsy_orderAllwaresHandle">
+                                               <p>立即付款</p>
+                                               <p>取消订单</p>
+                                           </li>
+                                       </ul>
+                                   </div>
+                                   <div class="lsy_orderAllware">
+                                       <!--订单商品摘要-->
+                                       <div class="lsy_orderAllwaresAbstract">
+                                           <!--订单时间<-->
+                                           <p class="lsy_orderAllwaresTime">2017-10-01 10:23:39</p>
+                                           <!--订单单号-->
+                                           <p>
+                                               订单号：<span class="lsy_orderAllwaresNumber"></span>
+                                           </p>
+                                           <!--订单收货人-->
+                                           <p>
+                                               收货人：<span class="lsy_orderAllwaresConsignee"></span>
+                                           </p>
+                                       </div>
+                                       <!--订单详细内容-->
+                                       <ul class="lsy_orderAllwaresContent">
+                                           <!--订单多选框-->
+                                           <li>
+                                               <input type="checkbox" name="" id="" value="" class="lsy_orderAllwaresCheck" />
+                                               <img src="" class="lsy_orderAllwaresImg" />
+                                           </li>
+                                           <!--商品属性-->
+                                           <li>
+                                               <h4 class="lsy_orderAllwaresName">商品名字4</h4>
+                                               <p class="lsy_orderAllwaresColor">颜色:<span class="waresColor"></span></p>
+                                               <p class="lsy_orderAllwaresSize">尺码:<span class="waresSize"></span></p>
+                                           </li>
+                                           <!--商品单价-->
+                                           <li class="lsy_orderAllwaresPrice">
+                                               <p class="waresPrice">￥2000</p>
+                                               <p class="waresSale">￥1599</p>
+                                           </li>
+                                           <!--购买数量-->
+                                           <li class="lsy_orderAllwaresAmount">
+                                               <p>1</p>
+                                           </li>
+                                           <!--实际款项-->
+                                           <li class="lsy_orderAllwaresTotal">
+                                               <p>￥1599</p>
+                                           </li>
+                                           <!--交易状态-->
+                                           <li class="lsy_orderAllwaresStatus">
+                                               <p>等待付款</p>
+                                               <p>订单详情</p>
+                                           </li>
+                                           <!--交易操作-->
+                                           <li class="lsy_orderAllwaresHandle">
+                                               <p>立即付款</p>
+                                               <p>取消订单</p>
+                                           </li>
+                                       </ul>
+                                   </div>
+                                   <div class="lsy_orderAllware">
+                                       <!--订单商品摘要-->
+                                       <div class="lsy_orderAllwaresAbstract">
+                                           <!--订单时间<-->
+                                           <p class="lsy_orderAllwaresTime">2017-10-01 10:23:39</p>
+                                           <!--订单单号-->
+                                           <p>
+                                               订单号：<span class="lsy_orderAllwaresNumber"></span>
+                                           </p>
+                                           <!--订单收货人-->
+                                           <p>
+                                               收货人：<span class="lsy_orderAllwaresConsignee"></span>
+                                           </p>
+                                       </div>
+                                       <!--订单详细内容-->
+                                       <ul class="lsy_orderAllwaresContent">
+                                           <!--订单多选框-->
+                                           <li>
+                                               <input type="checkbox" name="" id="" value="" class="lsy_orderAllwaresCheck" />
+                                               <img src="" class="lsy_orderAllwaresImg" />
+                                           </li>
+                                           <!--商品属性-->
+                                           <li>
+                                               <h4 class="lsy_orderAllwaresName">商品名字5</h4>
+                                               <p class="lsy_orderAllwaresColor">颜色:<span class="waresColor"></span></p>
+                                               <p class="lsy_orderAllwaresSize">尺码:<span class="waresSize"></span></p>
+                                           </li>
+                                           <!--商品单价-->
+                                           <li class="lsy_orderAllwaresPrice">
+                                               <p class="waresPrice">￥2000</p>
+                                               <p class="waresSale">￥1599</p>
+                                           </li>
+                                           <!--购买数量-->
+                                           <li class="lsy_orderAllwaresAmount">
+                                               <p>1</p>
+                                           </li>
+                                           <!--实际款项-->
+                                           <li class="lsy_orderAllwaresTotal">
+                                               <p>￥1599</p>
+                                           </li>
+                                           <!--交易状态-->
+                                           <li class="lsy_orderAllwaresStatus">
+                                               <p>等待付款</p>
+                                               <p>订单详情</p>
+                                           </li>
+                                           <!--交易操作-->
+                                           <li class="lsy_orderAllwaresHandle">
+                                               <p>立即付款</p>
+                                               <p>取消订单</p>
+                                           </li>
+                                       </ul>
+                                   </div>
+                                   <div class="lsy_orderAllware">
+                                       <!--订单商品摘要-->
+                                       <div class="lsy_orderAllwaresAbstract">
+                                           <!--订单时间<-->
+                                           <p class="lsy_orderAllwaresTime">2017-10-01 10:23:39</p>
+                                           <!--订单单号-->
+                                           <p>
+                                               订单号：<span class="lsy_orderAllwaresNumber"></span>
+                                           </p>
+                                           <!--订单收货人-->
+                                           <p>
+                                               收货人：<span class="lsy_orderAllwaresConsignee"></span>
+                                           </p>
+                                       </div>
+                                       <!--订单详细内容-->
+                                       <ul class="lsy_orderAllwaresContent">
+                                           <!--订单多选框-->
+                                           <li>
+                                               <input type="checkbox" name="" id="" value="" class="lsy_orderAllwaresCheck" />
+                                               <img src="" class="lsy_orderAllwaresImg" />
+                                           </li>
+                                           <!--商品属性-->
+                                           <li>
+                                               <h4 class="lsy_orderAllwaresName">商品名字6</h4>
+                                               <p class="lsy_orderAllwaresColor">颜色:<span class="waresColor"></span></p>
+                                               <p class="lsy_orderAllwaresSize">尺码:<span class="waresSize"></span></p>
+                                           </li>
+                                           <!--商品单价-->
+                                           <li class="lsy_orderAllwaresPrice">
+                                               <p class="waresPrice">￥2000</p>
+                                               <p class="waresSale">￥1599</p>
+                                           </li>
+                                           <!--购买数量-->
+                                           <li class="lsy_orderAllwaresAmount">
+                                               <p>1</p>
+                                           </li>
+                                           <!--实际款项-->
+                                           <li class="lsy_orderAllwaresTotal">
+                                               <p>￥1599</p>
+                                           </li>
+                                           <!--交易状态-->
+                                           <li class="lsy_orderAllwaresStatus">
+                                               <p>等待付款</p>
+                                               <p>订单详情</p>
+                                           </li>
+                                           <!--交易操作-->
+                                           <li class="lsy_orderAllwaresHandle">
+                                               <p>立即付款</p>
+                                               <p>取消订单</p>
+                                           </li>
+                                       </ul>
+                                   </div>
+                                   <div class="lsy_orderAllware">
+                                       <!--订单商品摘要-->
+                                       <div class="lsy_orderAllwaresAbstract">
+                                           <!--订单时间<-->
+                                           <p class="lsy_orderAllwaresTime">2017-10-01 10:23:39</p>
+                                           <!--订单单号-->
+                                           <p>
+                                               订单号：<span class="lsy_orderAllwaresNumber"></span>
+                                           </p>
+                                           <!--订单收货人-->
+                                           <p>
+                                               收货人：<span class="lsy_orderAllwaresConsignee"></span>
+                                           </p>
+                                       </div>
+                                       <!--订单详细内容-->
+                                       <ul class="lsy_orderAllwaresContent">
+                                           <!--订单多选框-->
+                                           <li>
+                                               <input type="checkbox" name="" id="" value="" class="lsy_orderAllwaresCheck" />
+                                               <img src="" class="lsy_orderAllwaresImg" />
+                                           </li>
+                                           <!--商品属性-->
+                                           <li>
+                                               <h4 class="lsy_orderAllwaresName">商品名字</h4>
+                                               <p class="lsy_orderAllwaresColor">颜色:<span class="waresColor"></span></p>
+                                               <p class="lsy_orderAllwaresSize">尺码:<span class="waresSize"></span></p>
+                                           </li>
+                                           <!--商品单价-->
+                                           <li class="lsy_orderAllwaresPrice">
+                                               <p class="waresPrice">￥2000</p>
+                                               <p class="waresSale">￥1599</p>
+                                           </li>
+                                           <!--购买数量-->
+                                           <li class="lsy_orderAllwaresAmount">
+                                               <p>1</p>
+                                           </li>
+                                           <!--实际款项-->
+                                           <li class="lsy_orderAllwaresTotal">
+                                               <p>￥1599</p>
+                                           </li>
+                                           <!--交易状态-->
+                                           <li class="lsy_orderAllwaresStatus">
+                                               <p>等待付款</p>
+                                               <p>订单详情</p>
+                                           </li>
+                                           <!--交易操作-->
+                                           <li class="lsy_orderAllwaresHandle">
+                                               <p>立即付款</p>
+                                               <p>取消订单</p>
+                                           </li>
+                                       </ul>
+                                   </div>
+                                   <div class="lsy_orderAllware">
+                                       <!--订单商品摘要-->
+                                       <div class="lsy_orderAllwaresAbstract">
+                                           <!--订单时间<-->
+                                           <p class="lsy_orderAllwaresTime">2017-10-01 10:23:39</p>
+                                           <!--订单单号-->
+                                           <p>
+                                               订单号：<span class="lsy_orderAllwaresNumber"></span>
+                                           </p>
+                                           <!--订单收货人-->
+                                           <p>
+                                               收货人：<span class="lsy_orderAllwaresConsignee"></span>
+                                           </p>
+                                       </div>
+                                       <!--订单详细内容-->
+                                       <ul class="lsy_orderAllwaresContent">
+                                           <!--订单多选框-->
+                                           <li>
+                                               <input type="checkbox" name="" id="" value="" class="lsy_orderAllwaresCheck" />
+                                               <img src="" class="lsy_orderAllwaresImg" />
+                                           </li>
+                                           <!--商品属性-->
+                                           <li>
+                                               <h4 class="lsy_orderAllwaresName">商品名字</h4>
+                                               <p class="lsy_orderAllwaresColor">颜色:<span class="waresColor"></span></p>
+                                               <p class="lsy_orderAllwaresSize">尺码:<span class="waresSize"></span></p>
+                                           </li>
+                                           <!--商品单价-->
+                                           <li class="lsy_orderAllwaresPrice">
+                                               <p class="waresPrice">￥2000</p>
+                                               <p class="waresSale">￥1599</p>
+                                           </li>
+                                           <!--购买数量-->
+                                           <li class="lsy_orderAllwaresAmount">
+                                               <p>1</p>
+                                           </li>
+                                           <!--实际款项-->
+                                           <li class="lsy_orderAllwaresTotal">
+                                               <p>￥1599</p>
+                                           </li>
+                                           <!--交易状态-->
+                                           <li class="lsy_orderAllwaresStatus">
+                                               <p>等待付款</p>
+                                               <p>订单详情</p>
+                                           </li>
+                                           <!--交易操作-->
+                                           <li class="lsy_orderAllwaresHandle">
+                                               <p>立即付款</p>
+                                               <p>取消订单</p>
+                                           </li>
+                                       </ul>
+                                   </div>
+                               </div>
+                               <!--订单底部导航-->
+                               <div class="lsy_orderAllbottomnav">
+                                   <input type="checkbox" name="" id="" value="" class="lsy_orderAll_Checks" />全选
+                                   <span class="lsy_orderAllwaredel">删除</span>
+                               </div>
+                               <!--订单页面切换栏-->
+                               <div class="lsy_orderAlltab">
+                                   <div class="lsy_orderPage">
+                                       <p>
+                                           <上一页</p>
+                                               <div class="lsy_orderspnPages">
+                                                   <span class="lsy_orderspnPage lsy_orderspnPaged">1</span>
+                                               </div>
+                                               <p>下一页></p>
+                                               <h4 class="lsy_orderPages">共<span></span>页</h4>
+                                   </div>
+                                   <div class="lsy_ordertabSkip">
+                                       <h4>到第<input type="text" class=""/>页</h4>
+                                       <button>确定</button>
+                                   </div>
+                               </div>
+                           </li>
+                           <!--待评价-->
+                           <li class="lsy_orderdetails">
+                               <h4>商品评价</h4>
+                               <div class="lsy_orderdetailscontent">
+                                   <!--商品信息摘要-->
+                                   <div class="lsy_orderdetailsAbstract">
+                                       <img class="lsy_orderdetailsImg" src="" />
+                                       <div class="lsy_orderdetailsware">
+                                           <h4 class="lsy_orderAllwaresName">商品名字</h4>
+                                           <p class="lsy_orderAllwaresColor">颜色:<span class="waresColor"></span></p>
+                                           <p class="lsy_orderAllwaresSize">尺码:<span class="waresSize"></span></p>
+                                       </div>
+                                   </div>
+                                   <!--用户评价-->
+                                   <div class="lsy_orderdetailsusers">
+                                       <textarea name="" class="lsy_orderComment" rows="" cols="" placeholder="亲，这里可以输入你想说的话噢~（300字以内）"></textarea>
+                                       <div class="lsy_orderCommentstar">
+                                           <p>
+                                               动态评分：
+                                               <input type="radio" name="comment" id="" value="" />好评
+                                               <input type="radio" name="comment" id="" value="" />中评
+                                               <input type="radio" name="comment" id="" value="" />差评
+                                           </p>
+                                           <div class="lsy_orderStar">
+                                               <div class="orderwholestar">
+                                                   总体评价：
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <p></p>分
+                                               </div>
+                                               <div class="waresstar">
+                                                   产品与描述相符：
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <p></p>分
+                                               </div>
+                                               <div class="attitudestar">
+                                                   客服服务态度：
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <p></p>分
+                                               </div>
+                                               <div class="logisticsstar">
+                                                   物流服务态度：
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <span>☆</span>
+                                                   <p></p>分
+                                               </div>
+                                           </div>
+                                           <div class="lsy_orderCommentsubmit">
+                                               <span class="lsy_Commentsubmit">
+                                                   发表评论
+                                               </span>
+                                               <input type="radio" name="submit" id="" value="" />匿名
+                                               <input type="radio" name="submit" id="" value="" />公开
+                                               <span class="Commentpicture"></span>
+                                               <span class="Commentupload">上传照片</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <!--订单详情-->
+                           <li>
+                           </li>
+                       </ul>
+                   </div>
+                   <!--我的购物车-->
+                   <div class="lsy_shopcart">
+                       <h4>
+                           <span>首页</span>
+                           <span>></span>
+                           <span>会员中心</span>
+                           <span>></span>
+                           <span>我的购物车</span>
+                       </h4>
+                       <ul class="lsy_shopsubnav">
+                           <li>
+                               <input type="checkbox" name="" id="" value="" class="lsy_shop_Checks" />全选
+                           </li>
+                           <li>
+                               商品信息
+                           </li>
+                           <li>
+                               单价
+                           </li>
+                           <li>
+                               数量
+                           </li>
+                           <li>
+                               小计
+                           </li>
+                           <li>
+                               操作
+                           </li>
+                       </ul>
+                       <!--子订单内容-->
+                       <div class="lsy_shopwares">
+                           <div class="lsy_shopware">
+                               <!--订单详细内容-->
+                               <ul class="lsy_shopwaresContent">
+                                   <!--订单多选框-->
+                                   <li>
+                                       <input type="checkbox" name="" id="" value="" class="lsy_shopwaresCheck" />
+                                       <img class="lsy_shopwaresImg" />
+                                   </li>
+                                   <!--商品属性-->
+                                   <li>
+                                       <h4 class="lsy_shopwaresName">商品名字1</h4>
+                                       <p class="lsy_shopwaresColor">颜色:<span class="waresColor"></span></p>
+                                       <p class="lsy_shopwaresSize">尺码:<span class="waresSize"></span></p>
+                                   </li>
+                                   <!--商品单价-->
+                                   <li class="lsy_shopwaresPrice">
+                                       <p class="waresPrice">￥2000</p>
+                                       <p class="waresSale">￥1599</p>
+                                   </li>
+                                   <!--购买数量-->
+                                   <li class="lsy_shopwaresAmount">
+                                       <div class="lsy_waresAmount">
+                                           <input type="button" name="" class="Amountbutton1" value="-" />
+                                           <input type="text" name="" class="Amountnumber" value="1" />
+                                           <input type="button" class="Amountbutton2" value="+" />
+                                       </div>
+                                   </li>
+                                   <!--实际款项-->
+                                   <li class="lsy_shopwaresTotal">
+                                       <p class="lsy_total">￥1599</p>
+                                   </li>
+                                   <!--交易操作-->
+                                   <li class="lsy_shopwaresHandle">
+                                       <p>删除</p>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                       <!--订单底部导航-->
+                       <div class="lsy_shopbottomnav">
+                           <input type="checkbox" name="" id="" value="" class="lsy_shop_Checks" />全选
+                           <span class="lsy_shopwaredel">删除</span>
+                           <button class="CheckdshopAmounts">去结算</button>
+                           <p>总价（含运费）:<span class="CheckdshopTotal"></span></p>
+                           <p>已选<span class="Checkdshopnum"></span>件商品</p>
+                       </div>
+                       <!--订单分页切换-->
+                       <div class="lsy_shoptab">
+                           <div class="lsy_shopPage">
+                               <p>
+                                   <上一页</p>
+                                       <div class="lsy_shopspnPages">
+                                           <span class="lsy_shopspnPage lsy_shopspnPaged">1</span>
+                                       </div>
+                                       <p>下一页></p>
+                                       <h4 class="lsy_shopPages">共<span></span>页</h4>
+                           </div>
+                       </div>
+                   </div>
+                   <!--确认订单-->
+                   <div class="lsy_ordertrue">
+                       <h4>
+                           <span>首页</span>
+                           <span>></span>
+                           <span>会员中心</span>
+                           <span>></span>
+                           <span>确认订单</span>
+                       </h4>
+                       <div class="lsy_orderContenttrue">
+                           <div class="lsy_truebar">
+                               <img src="img/lsy_ordertrue/lsy_ordertrue1.png" />
+                           </div>
+                           <div>
+                               <h4>确认收货地址</h4>
+                               <ul class="lsy_trueaddress">
+                                   <li>
+                                       <input type="checkbox" />
+                                       <span>刘璐*</span>
+                                       <span>北京 北京市 昌平区 沙河镇</span>
+                                       <span>唐山博物馆对面培仁里小区215-6-555</span>
+                                       <span>17624589624</span>
+                                       <button>编辑</button>
+                                   </li>
+                               </ul>
+                           </div>
+                           <div>
+                               <h4>支付方式</h4>
+                               <div class="lsy_paytrue">
+                                   <span>在线支付<input type="checkbox" /></span>
+                                   <span>货到付款<input type="checkbox" /></span>
+                               </div>
+                           </div>
+                           <div class="lsy_trueDetail">
+                               <h4>确认订单信息</h4>
+                               <div>
+                                   <span>商品信息</span>
+                                   <span>单价</span>
+                                   <span>数量</span>
+                                   <span>实付款</span>
+                                   <span>操作</span>
+                               </div>
+                               <div class="lsy_trueDetailclone">
+                                   <ul class="lsy_shopwaresContent">
+                                       <!--订单多选框-->
+                                       <li>
+                                           <input type="checkbox" name="" id="" value="" class="lsy_shopwaresCheck" />
+                                           <img class="lsy_shopwaresImg" />
+                                       </li>
+                                       <!--商品属性-->
+                                       <li>
+                                           <h4 class="lsy_shopwaresName">商品名字1</h4>
+                                           <p class="lsy_shopwaresColor">颜色:<span class="waresColor"></span></p>
+                                           <p class="lsy_shopwaresSize">尺码:<span class="waresSize"></span></p>
+                                       </li>
+                                       <!--商品单价-->
+                                       <li class="lsy_shopwaresPrice">
+                                           <p class="waresPrice">￥2000</p>
+                                           <p class="waresSale">￥1599</p>
+                                       </li>
+                                       <!--购买数量-->
+                                       <li class="lsy_shopwaresAmount">
+                                           <div class="lsy_waresAmount">
+                                               <input type="button" name="" class="Amountbutton1" value="-" />
+                                               <input type="text" name="" class="Amountnumber" value="1" />
+                                               <input type="button" class="Amountbutton2" value="+" />
+                                           </div>
+                                       </li>
+                                       <!--实际款项-->
+                                       <li class="lsy_shopwaresTotal">
+                                           <p class="lsy_total">￥1599</p>
+                                       </li>
+                                       <!--交易操作-->
+                                       <li class="lsy_shopwaresHandle">
+                                           <p>删除</p>
+                                       </li>
+                                   </ul>
+                               </div>
+                               <div class="lsy_truelast">
+                                   <p class="lsy_truepay">实付款：<span class="realPay">￥1599</span></p>
+                                   <p>收货地址：<span>北京 北京市 昌平区 沙河镇</span><span>唐山博物馆对面培仁里小区215-6-555</span></p>
+                                   <p>收货人：<span>刘璐*</span><span>17624589624</span></p>
+                                   <button>提交订单</button>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <!--订单支付-->
+                   <div class="lsy_orderpay">
+                       <!--顶部导航-->
+                       <h4>
+                           <span>首页</span>
+                           <span>></span>
+                           <span>会员中心</span>
+                           <span>></span>
+                           <span>我的订单</span>
+                       </h4>
+                       <!--支付环境-->
+                       <div class="lsy_payConditions">
+                           <!--订单进度-->
+                           <div class="lsy_payRate">
+                               <!--进度条-->
+                               <div class="lsy_payRatebar">
+                                   <img src="img/lsy_orderpay/lsy_payRatebar.png" />
+                               </div>
+                               <!--进度提示-->
+                               <div class="lsy_RateCue">
+                                   <p>您的订单已提交，请尽快付款，以便我们尽快给您发货！</p>
+                                   <h4>应付金额：<span class="lsy_payFor">￥1599.00</span></h4>
+                                   <p>请在订单成功后<span>72</span>小时内完成支付，否则订单会自动取消噢~</p>
+                               </div>
+                           </div>
+                           <!--支付条件-->
+                           <div class="lsy_payConditions">
+                               <p>支付方式</p>
+                               <div class="lsy_payWays">
+                                   <ul class="lsy_payWay">
+                                       <li>
+                                           <img src="img/lsy_orderpay/lsy_payWay1.png" alt="" />
+                                           <input type="checkbox" />
+                                       </li>
+                                       <li>
+                                           <img src="img/lsy_orderpay/lsy_payWay2.png" alt="" />
+                                           <input type="checkbox" />
+                                       </li>
+                                       <li>
+                                           <img src="img/lsy_orderpay/lsy_payWay3.png" alt="" />
+                                           <input type="checkbox" />
+                                       </li>
+                                       <li>
+                                           <img src="img/lsy_orderpay/lsy_payWay4.png" alt="" />
+                                           <input type="checkbox" />
+                                       </li>
+                                       <li>
+                                           <img src="img/lsy_orderpay/lsy_payWay5.png" alt="" />
+                                           <input type="checkbox" />
+                                       </li>
+                                       <li>
+                                           <img src="img/lsy_orderpay/lsy_payWay6.png" alt="" />
+                                           <input type="checkbox" />
+                                       </li>
+                                       <li>
+                                           <img src="img/lsy_orderpay/lsy_payWay7.png" alt="" />
+                                           <input type="checkbox" />
+                                       </li>
+                                       <li>
+                                           <img src="img/lsy_orderpay/lsy_payWay8.png" alt="" />
+                                           <input type="checkbox" />
+                                       </li>
+                                   </ul>
+                                   <div class="lsy_payCondition">
+                                       <p>您在安全的网络环境下，请放心支付！</p>
+                                       <p>支付卡号（账号）：</p>
+                                       <input type="text" class="lsy_payAccount" />
+                                       <p>支付密码</p>
+                                       <div class="lsy_payPassword">
+                                           <input type="password" name="" />
+                                           <input type="password" name="" />
+                                           <input type="password" name="" />
+                                           <input type="password" name="" />
+                                           <input type="password" name="" />
+                                           <input type="password" name="" />
+                                           <p>请输入6位数字支付密码</p>
+                                       </div>
+                                       <div class="lsy_payConfirm">
+                                           <button>确认支付</button>
+                                           <button>取消支付</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <!--支付结果-->
+               <div id="lsy_payresult">
+                   <h4>
+                       <span>首页</span>
+                       <span>></span>
+                       <span>会员中心</span>
+                       <span>></span>
+                       <span>支付中心</span>
+                   </h4>
+                   <div class="lsy_resultbar">
+                       <img src="img/lsy_payresult/lsy_payresult1.png" />
+                   </div>
+                   <!--支付成功-->
+                   <div class="lsy_payresulttrue">
+                       <div>
+                           <img src="img/lsy_payresult/lsy_payresult2.png" />
+                       </div>
+                       <div>
+                           <h3>亲，您的订单已支付成功，我们会尽快发货哒~！</h3>
+                           <p>在线支付：<span></span>您的订单正在处理中···</p>
+                           <p class='lsy_address'>收货地址：</p>
+                           <button>查看订单</button>
+                           <button class="contiShopping">继续购物</button>
+                       </div>
+                   </div>
+                   <!--支付失败-->
+                   <div class="lsy_payresultfalse">
+                       <div>
+                           <img src="img/lsy_payresult/lsy_payresult3.png" />
+                       </div>
+                       <div>
+                           <h3>抱歉，您的订单支付失败！</h3>
+                           <p>失败原因：网络未连接···</p>
+                           <button>查看订单</button>
+                           <button class="failBack">返回支付</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   
+
+    <!--底部  开始-->
+    <div class="bottom">
+        <div class="bottom_box1">
+            <ul class="bottom_rowone">
+                <li><a href="#">支付方式</a></li>
+                <li><a href="#">货到付款</a></li>
+                <li><a href="#">在线支付</a></li>
+                <li><a href="#">分期付款</a></li>
+                <li><a href="#">邮局汇款</a></li>
+                <li><a href="#">公司转账</a></li>
+            </ul>
+            <ul class="bottom_rowtwo">
+                <li><a href="#">售后服务</a></li>
+                <li><a href="#">退换货政策</a></li>
+                <li><a href="#">退换货流程</a></li>
+                <li><a href="#">购买延保服务</a></li>
+                <li><a href="#">退款说明</a></li>
+                <li><a href="#">退换货申请</a></li>
+                <li><a href="#">维修/保养</a></li>
+            </ul>
+            <ul class="bottom_rowthree">
+                <li><a href="#">购物指南</a></li>
+                <li><a href="#">导购演示</a></li>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="#">会员等级</a></li>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">品牌大全</a></li>
+            </ul>
+            <ul class="bottom_rowfour">
+                <li><a href="#">物流配送</a></li>
+                <li><a href="#">免运费政策</a></li>
+                <li><a href="#">配送服务承诺</a></li>
+                <li><a href="#">签收验货</a></li>
+                <li><a href="#">物流查询</a></li>
+            </ul>
+            <ul class="bottom_rowfive">
+                <img src="images/bottom/1.jpg" />
+            </ul>
+        </div>
+        <ul class="bottom_box2">
+            <li class="bottom_box2_lis1"><a href="#">关于我们</a></li>
+            <li class="bottom_box2_lis1"><a href="#">联系我们</a></li>
+            <li class="bottom_box2_lis1"><a href="#">联系客服</a></li>
+            <li class="bottom_box2_lis1"><a href="#">合作招商</a></li>
+            <li class="bottom_box2_lis1"><a href="#">友情链接</a></li>
+            <li class="bottom_box2_lis1"><a href="#">隐私政策</a></li>
+            <li><a href="#">帮助中心</a></li>
+        </ul>
+        <div class="bottom_img">
+            <img src="images/bottom/2.jpg" height="88" />
+        </div>
+    </div>
+    <!--底部  结束-->
+</body>
+<script src="http://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../skip.js"></script>
+<script src="../lycar.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/lsy_order.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    
+
+$('.lsy_shopwares').lsyAdd();
+//去结算
+$('.CheckdshopAmounts').on('click', function() {
+    let tobuy = $('.lsy_shopwaresCheck:checked').parents('.lsy_shopwaresContent');
+    $('.lsy_ordertrue').css('display', 'block').siblings().css('display', 'none');
+    $('.lsy_trueDetailclone').empty();
+    $('.lsy_trueDetailclone').append(tobuy.clone());
+    $('.realPay').html('￥'+localStorage.getItem('price'))
+    $.fn.leng($('.lsy_ordertrue'));
+});
+
+//确认订单,去支付
+$('.lsy_truelast button').on('click', function() {
+
+    $('.lsy_ordertrue').css('display', 'none');
+    $('.lsy_orderpay').css('display', 'block');
+})
+
+
+
+//确认支付,显示结果
+$('.lsy_payConfirm button').eq(0).on('click', function() {
+    console.log($('.lsy_payPassword input').val());
+    $('#lsy_payresult').css('display', 'block').siblings().css('display', 'none')
+
+    function pay() {
+        for (let i = 0; i < $('.lsy_payPassword input').length; i++) {
+            var cc = $('.lsy_payPassword input').eq(i).val();
+            console.log(cc.length)
+            if (cc.lenght == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    console.log(pay())
+    if (pay()) {
+        $('.lsy_payresulttrue').css('display', 'block').siblings().css('display', 'none')
+    } else {
+        $('.lsy_payresultfalse').css('display', 'block').siblings().css('display', 'none')
+    }
+
+
+})
+
+//返回支付页
+$('.failBack').on('click', function() {
+    $('#lsy_payresult').css('display', 'none').siblings().css('display', 'block')
+    $('.lsy_orderpay').css('display', 'block').siblings().css('display', 'none')
+    console.log($('.lsy_orderpay'))
+})
+
+//继续购物
+$('.contiShopping').on('click', function() {
+    window.open('http://nereus.gotoip2.com/jin/djq/index/index.html', '_self')
+})
+</script>
+
+</html>

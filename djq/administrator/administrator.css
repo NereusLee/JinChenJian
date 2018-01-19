@@ -1,0 +1,398 @@
+/*头部   开始*/
+.top{
+	width: 100%;
+	height: 185px;
+}
+.top_box{
+	width: 1204px;
+	height: 135px;
+	margin: 0 auto;
+}
+.top_box_1{
+	width: 1204px;
+	height: 35px;
+	border: 1px solid darkgray;
+	background: #EEEEEE;
+	position: relative;
+}
+.top_box_1_01{
+	width: 270px;
+    height: 35px;
+}
+.top_box_1_01>p{
+	text-align: center;
+	margin-top: 5px;
+}
+.top_box_1_02{
+	width: 690px;
+	height: 35px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.top_box_1_02>ul li{
+	list-style: none;
+	float: left;
+	width: 115px;
+	height: 35px;
+	cursor: pointer;
+}
+.top_box_1_02>ul li:nth-of-type(1){
+	color: red;
+}
+.top_box_1_02>ul{
+	width: 690px;
+	height: 35px;
+	margin-top: 0px;
+	position: absolute;
+	top: 5px;
+}
+
+.top_box1{
+	width: 1204px;
+	height: 100px;
+	position: relative;
+}
+.top_box1_img{
+	width: 278px;
+	height: 100px;
+}
+.top_box1_search>input{
+	width: 550px;
+	height: 50px;
+	border: 1px solid red;
+	position: absolute;
+	left: 272px;
+	bottom: 30px;
+	font-size: 22px;
+}
+.top_box1_icon{
+	width: 80px;
+	height: 52px;
+	border: 1px solid red;
+	border-left: none;
+	position: absolute;
+	bottom: 30px;
+	right: 300px;
+}
+.top_box1_icon>img{
+	margin-left: 20px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.top_box1_shopCar{
+	width: 150px;
+	height: 50px;
+	border: 1px solid red;
+	position: absolute;
+	bottom: 32px;
+	right: 78px;
+}
+.top_box1_shopCar>img{
+	margin-top: 5px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.top_box2{
+	width: 100%;
+	height: 48px;
+	background: red;
+	margin-top: -16px;
+}
+.top_box2_1{
+	width: 1204px;
+	height: 50px;
+	margin: 0 auto;
+}
+.top_box2_1>ul{
+	width: 1204px;
+	height: 50px;
+}
+.top_box2_1>ul li{
+	width: 200px;
+	height: 50px;
+	list-style: none;
+	float: left;
+	color: white;
+	font-size: 20px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+/*头部  结束*/
+
+/*用户信息 开始*/
+.list_bigbox{
+	width: 100%;
+	height: 778px;
+}
+.list_bigbox1{
+	width: 1204px;
+	height: 778px;
+	margin: 0 auto;
+	position: relative;
+}
+.list_b1{
+	width: 168px;
+	height: 778px;
+}
+.list_b1>ul li{
+	list-style: none;
+	width: 168px;
+	height: 33px;
+	cursor: pointer;
+}
+.list_lis{
+	color: red;
+}
+.list_b2{
+	width: 1050px;
+	height: 740px;
+	position: absolute;
+	top: 0;
+	right: -20px;
+}
+.list_b2_information{
+	width: 1050px;
+	height: 240px;
+	margin-top: 50px;
+}
+.list_information_top{
+	width: 1050px;
+	height: 40px;
+	background: #EEEEEE;
+}
+.list_information_top>span{
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	margin-left: 40px;
+}
+.list_information_body{
+	width: 1048px;
+	height: 198px;
+	border: 1px solid #CCCCCC;
+	position: relative;
+}
+.list_information_left{
+	width: 428px;
+	height: 180px;
+	border-right: 1px solid #CCCCCC;
+	margin-top: 6px;
+}
+.list_information_right1{
+	width: 595px;
+	height: 76px;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	border-bottom: 1px solid #CCCCCC;
+	cursor: pointer;
+}
+.list_information_right2{
+	width: 595px;
+	height: 116px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	cursor: pointer;
+}
+.account_box1{
+	width: 1050px;
+	height: 490px;
+	margin-top: 30px;
+}
+.account_box1_top{
+	width: 1050px;
+	height: 40px;
+	background: #EEEEEE;
+}
+.account_box1_top>span{
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	margin-left: 40px;
+}
+.account_body{
+	width: 1048px;
+	height: 448px;
+	border: 1px solid #CCCCCC;
+	position: relative;
+}
+.information_set{
+	width: 312px;
+	height: 450px;
+	margin: 20px auto;
+	padding: 0;
+	position: relative;
+}
+.level{
+	position: absolute;
+	top: 30px;
+	left: 75px;
+}
+.information_set>li{
+	list-style: none;
+	margin-top: 15px;
+}
+.information_set>li:nth-last-of-type(3){
+	margin-left: 38px;
+}
+.information_set>li:nth-last-of-type(5){
+	margin-left: 23px;
+}
+.information_set>li:nth-child(5){
+	margin-left: -6px;
+}
+.information_set>li:nth-child(4){
+	margin-left: 26px;
+}
+.information_set>li:nth-child(3){
+	margin-left: 32px;
+}
+.information_set>li:nth-child(2){
+	margin-left: 0px;
+}
+.information_set>li:nth-child(1){
+	margin-left: 10px;
+}
+.information_set>button{
+	width: 150px;
+	height: 40px;
+	background: red;
+	color: white;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	position: absolute;
+	bottom: 35px;
+	left: 56px;
+}
+/*用户信息  结束*/
+
+/*底部图标  开始*/
+.icon{
+	width: 100%;
+	height: 150px;
+	background: #F7F7F7;
+	margin-top: 60px;
+}	
+.icon_box1{
+	width: 1200px;
+	height: 150px;
+	margin: 0 auto;
+}
+.icon_box1>li{
+	width: 300px;
+	height: 150px;
+	list-style: none;
+	float: left;
+	margin-top: 20px;
+}
+/*底部图标  结束*/
+
+/*底部  开始*/
+.bottom{
+	width: 100%;
+	height: 385px;
+	background: #EEEEEE;
+}
+.bottom_box1{
+	width: 1200px;
+	height: 255px;
+	margin: 0 auto;
+	border-bottom: 1px solid #CCCCCC;
+}
+.bottom_box1>ul{
+	float: left;
+}
+.bottom_rowone{
+	width: 240px;
+	height: 230px;
+	margin: 0;
+	padding: 0;
+}
+.bottom_rowone>li a{
+	text-decoration: none;
+	color: #9B9B9B;
+	margin-left: 50px;
+}
+.bottom_rowone>li{
+	list-style: none;
+	margin-top: 10px;
+}
+
+.bottom_rowtwo{
+	width: 240px;
+	height: 230px;
+	margin: 0;
+	padding: 0;
+}
+.bottom_rowtwo>li a{
+	text-decoration: none;
+	color: #9B9B9B;
+	margin-left: 50px;
+	
+}
+.bottom_rowtwo>li{
+	list-style: none;
+	margin-top: 10px;
+}
+
+.bottom_rowthree{
+	width: 240px;
+	height: 230px;
+	margin: 0;
+	padding: 0;
+}
+.bottom_rowthree>li a{
+	text-decoration: none;
+	color: #9B9B9B;
+	margin-left: 50px;
+}
+.bottom_rowthree>li{
+	list-style: none;
+	margin-top: 10px;
+}
+
+.bottom_rowfour{
+	width: 240px;
+	height: 230px;
+	margin: 0;
+	padding: 0;
+}
+.bottom_rowfour>li a{
+	text-decoration: none;
+	color: #9B9B9B;
+	margin-left: 50px;
+}
+.bottom_rowfour>li{
+	list-style: none;
+	margin-top: 10px;
+}
+.bottom_box2{
+	width: 648px;
+	height: 40px;
+	margin: 0 auto;
+}
+.bottom_box2>li{
+	list-style: none;
+	float: left;
+	width: 90px;
+	height: 22px;
+	margin-top: 8px;
+	text-align: center;
+	text-decoration: none;
+}
+.bottom_box2>li a{
+	text-decoration: none;
+	color: #767676;
+}
+.bottom_box2_lis1{
+	border-right: 2px solid #686868;
+}
+.bottom_img{
+	margin: 0 auto;
+	width: 830px;
+}
+/*底部  结束*/
