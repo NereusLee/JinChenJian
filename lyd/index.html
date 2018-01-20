@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索框</title>
+	
+	<!-- <script type="text/javascript" src="search.js"></script> -->
+	<style type="text/css">
+		.lyu{
+			list-style:none;
+		}
+		.lyu li{
+			width: 200px;
+		    height: 330px;
+		    font-size: 14px;
+		    color: #333;
+		    line-height: 20px;
+		    overflow: hidden;
+		    margin: 8px auto;
+		    float: left;
+		    margin:10px;
+		}
+		.tutu{
+			width:200px;
+			height:200px;
+		}
+		.tutu img{
+			display: block;
+			height: :200px;
+		}
+		.tutu span{
+			position: absolute;
+			top:280px;
+		}
+		.ly_product{
+			overflow: hidden;
+			height: 60px;
+		}
+		.ly_price{
+			font-size: 22px;
+			color: rgb(255,68,0);
+		}
+		.tu_right{
+			float:right;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="txt" ondblclick="$.fn.check()">
+	<button id="btn" onclick="goSearch()">搜索</button>
+	<iframe src="a.html" width="400" height="400" id="iframe" ></iframe>
+	<ul class="lyu"></ul>
+	<!-- <ul id="bb"></ul> -->
+	
+	<script   src="http://code.jquery.com/jquery-3.2.0.min.js"   integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="   crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var returnData={};
+
+		$(document).keydown(function() {
+			if (event.keyCode == "13") { 
+				goSearch();
+			}
+		});
+		var goSearch=function(){
+				var rawUrl;
+				rawUrl='https://s.taobao.com/search?data-key=s&data-value=44&ajax=true&_ksTS=1514541567667_869&callback=jsonp870&q=' + $("#txt").val() + '&imgfile=&ie=utf8&bcoffset=10&ntoffset=3&p4ppushleft=1%2C48';
+				$('.lyu').empty();
+				$.ajax({
+					type:"get",
+					url:rawUrl,
+					dataType:'jsonp',
+					jsonpCallback:'jsonp870'
+				}).done(function(data){
+					console.log(data)
+					var rawData=data.mods.itemlist.data.auctions;
+					
+					if(rawData.length===0){
+						alert('数据为空')
+						return;
+					}
+
+					for(var k = 0;k < 3; k++){
+						for (var i = 0; i < rawData.length; i++) {
+					        li = $('<li></li>')
+					        li.append('<div class="tutu"><img height=200 src=http:' + rawData[i].pic_url + '></div>')
+					        li.append('<p class="ly_product">' + rawData[i].raw_title + '</p>')
+					        li.append('<span class="ly_price">' + rawData[i].view_price + '</span>')
+					        li.append('<span class="tu_right">' + rawData[i].view_sales + '</span>')
+					        li.attr({
+					          "links": rawData[i].comment_url,
+					          "lyid": rawData[i].user_id
+					        })
+					        $('.lyu').append(li)
+					      }
+					}
+				}).fail(function(data){
+					console.log(data)
+					console.log('网络连接失败，请检查网络')
+				})
+			}
+
+			$('.lyu').on("click","li",function(){
+				// $.ajax({
+				// 		type:'post',
+				// 		url:"https://aldcdn.tmall.com/recommend.htm?itemId=16109378213&categoryId=110308&sellerId=595397331&shopId=63326917&brandId=578506429&refer=https%3A%2F%2Fs.taobao.com%2Fsearch%3Fq%3D%25E7%2594%25B5%25E8%2584%2591%26imgfile%3D%26commend%3Dall%26ssid%3Ds5-e%26search_type%3Ditem%26sourceId%3Dtb.index%26spm%3Da21bo.2017.201856-taobao-item.1%26ie%3Dutf8%26initiative_id%3Dtbindexz_20170306&brandSiteId=0&rn=&appId=03054&isVitual3C=false&isMiao=false&count=12&callback=jsonpAld03054",
+				// 		dataType:'jsonp',
+				// 		jsonpCallback:'jsonpAld03054'
+				// 	}).done(function(data){
+				// 		console.log(data)
+				// 	})
+
+
+
+
+				var that=this;
+				// window.open(this.getAttribute("links"))
+				var itemId=that.getAttribute("lyid")
+				returnData.gtitle=$(this).children('.ly_product').text();
+				console.log(123);
+				console.log(returnData);
+				// var default={
+				// 	'itemId':itemId,
+				// 	'sellerId':itemId,
+				// 	'rn':3,
+				// 	'appId':03054,
+				// 	'count':12,
+				// 	'callback':'jsonpAld03054'
+				// }
+				$.ajax({
+					type:'post',
+					url:"qq.php",
+					data:{'id':itemId},
+					async: false,
+				}).done(function(da){
+					// $('.lyu').html(da)
+					// var dad=JSON.parse(da)
+					dad=da.split('lyd:');
+					console.log(dad[1])
+					
+					// console.log(decodeURIComponent(encodeURIComponent(dad)))
+					var data1=JSON.parse(dad[0].replace(/detail_recommend_viewed\(/g,"").replace(/\}\)\;/g,"}"))
+					var data2=JSON.parse(dad[1].replace(/detail_recommend_bought\(/g,"").replace(/\}\)\;/g,"}"))
+					console.log(data1,data2)
+					detail_recommend_viewed(data1,data2)
+					// bgp=data.result[0].pic;
+					// smp=[data.result[1].pic,data.result[2].pic,data.result[3].pic];
+					// gtitle=data.result[0].itemName;200
+					// var gprice=[];
+					// var alt=[];
+					// for(i=0;i<data.result.length;i++){
+					// 	$("#bb").append("<li><img src='http:"+data.result[i].pic+"'><li/>")
+					// 	gprice.push(data.result[i].price)
+					// 	alt.push(data.result[i].itemName.match(/[\u4E00-\u9FA5]{8}/))
+					// }
+					// returnData.bgp=bgp;
+					// returnData.smp=smp;
+					// returnData.gtitle=gtitle;
+					// returnData.gprice=gprice;
+					// returnData.alt=alt;
+					
+				})
+				
+			});
+			
+				var detail_recommend_viewed=function(data1,data2){
+					// console.log(data)
+					bgp=data1.result[0].pic;
+					smp=data1.result[1].pic+"";
+					var gprice=data1.result[0].price;
+					// var alt=[];
+					// for(i=0;i<data1.result.length;i++){
+						// $("#bb").append("<li><img src='http:"+data1.result[i].pic+"'><li/>")
+						// gprice.push(data1.result[i].price)
+						// alt.push(data1.result[i].itemName.match(/[\u4E00-\u9FA5]{8}/))
+					// }
+					returnData.bgp=bgp;
+					returnData.smp=smp;
+					returnData.gprice=gprice;
+					 
+					var introduce = data2.result[0].pic;
+					// for (i = 0; i < 3; i++) {
+					// 	introduce.push(data2.result[i].pic)
+					// }
+					console.log(introduce)
+					var colors = data2.result[1].pic;
+					// for (i = 3; i < data2.result.length; i++) {
+					// 	colors.push(data2.result[i].pic)
+					// }
+					returnData.introduce = introduce;
+					returnData.colors = colors;
+					// returnData.eval = eval;
+
+					$.fn.taob2(returnData)
+				}
+
+				;(function($) {
+					$.fn.extend({
+						taob2: function(data) {
+							$.ajax({
+								type: "post",
+								url: "taob2.php",
+								async: false,
+								data: {
+									bgP: data.bgp,
+									smP: data.smp,
+									goodsTitle: data.gtitle,
+									goodsPrice: data.gprice,
+									colors: data.colors,
+									introduce: data.introduce,
+									// alt: data.alt.join(','),
+									flag: 1
+								}
+							}).done(function(data) {
+								console.log(data)
+							})
+						},
+						check:function(){
+							$.ajax({
+								type:'get',
+								url:'getData.php?flag=2',
+							}).done(function(data){
+								console.log(data)
+								var jso=JSON.parse(data)
+								var img=data.replace(/\\\//g,'/').match(/http[^\"\"\,]+jpg/g);
+								console.log(data.replace(/\\\//g,'/'))
+								for(i=0;i<img.length;i++){
+									console.log(img[i])
+									var im=$('<img src="'+img[i]+'">');
+									$('body').append(im);
+								}
+							});
+						}
+					});
+				})($);
+
+				 // return returnData;
+			// })($,returnData)
+	</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+.ly-content {
+  width: 100%;
+  background-image: url("../lyimg/ban.jpg");
+  height: 600px;
+  box-sizing: border-box;
+}
+.ly-content p {
+  text-align: center;
+}
+.ly-content .ly-input {
+  width: 500px;
+  height: 500px;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+  left: 17%;
+  top: 6%;
+}
+.ly-content .ly-input .lytop {
+  background-color: #ee0000;
+  width: 100%;
+  height: 55px;
+  flex: 1;
+  box-sizing: border-box;
+  border-bottom: 2px #ee0000 solid;
+  font-size: 26px;
+  font-weight: 500;
+}
+.ly-content .ly-input .lytop span {
+  display: inline-block;
+}
+.ly-content .ly-input .lytop .ly-tit:nth-of-type(1) {
+  background-color: white;
+  color: black;
+  width: 50%;
+  height: 100%;
+  line-height: 55px;
+  text-align: center;
+}
+.ly-content .ly-input .lytop .ly-tit:nth-of-type(2) {
+  background-color: #ee0000;
+  color: white;
+  width: 50%;
+  height: 100%;
+  line-height: 55px;
+  text-align: center;
+}
+.ly-content .ly-input .ly-form {
+  width: 80%;
+  flex: 7;
+  margin: auto;
+  position: relative;
+  margin-top: 9px;
+  display: none;
+}
+.ly-content .ly-input .ly-form span {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  margin-bottom: 5px;
+  text-align: right;
+  margin-right: 5px;
+}
+.ly-content .ly-input .ly-form input {
+  height: 30px;
+  margin-bottom: 5px;
+  width: 270px;
+}
+.ly-content .ly-input .ly-form ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-size: 14px;
+}
+.ly-content .ly-input .ly-form input[type="submit"] {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ee0000;
+  color: white;
+  border: none;
+}
+.ly-content .ly-input .ly-form .lytian {
+  color: #979797;
+  font-size: 12px;
+}
+.ly-content .ly-input .ly-form p:nth-last-of-type(2) {
+  margin: 5px auto;
+}
+.ly-content .ly-input .ly-form p:last-of-type {
+  font-size: 14px;
+  color: #ee0000;
+  position: relative;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ly-content .ly-input .ly-form .lya {
+  display: inline-block;
+  font-size: 12px;
+  position: relative;
+  left: 14px;
+  top: 8px;
+}
+.ly-content .ly-input .ly-loginWay {
+  flex: 1.8;
+  width: 96%;
+  border-top: 1px solid grey;
+  margin: 5px auto;
+}
+.ly-content .ly-input .ly-loginWay p {
+  font-size: 14px;
+}
+.ly-content .ly-input .ly-check {
+  width: 100px;
+  height: 25px;
+  position: relative;
+  top: 2px;
+}
+.ly-content .lyma {
+  width: 100px;
+  background-color: #669933;
+  font-style: italic;
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  top: 4px;
+  left: 12px;
+}
+.ly-input {
+  display: flex;
+  flex-direction: column;
+}
+.ly-input .ly-form2 {
+  width: 93%;
+  flex: 5;
+  margin: auto;
+  box-sizing: border-box;
+  margin-top: 9px;
+  top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.ly-input .ly-form2 .lyslice {
+  flex: 1;
+}
+.ly-input .ly-form2 .ly-check {
+  width: 100px;
+  height: 25px;
+  position: relative;
+  top: 2px;
+}
+.ly-input .ly-form2 span {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  text-align: right;
+  margin-right: 5px;
+}
+.ly-input .ly-form2 p {
+  display: inline-block;
+}
+.ly-input .ly-form2 input {
+  height: 30px;
+  width: 270px;
+}
+.ly-input .ly-form2 input[type="submit"] {
+  background-color: #ee0000;
+  color: white;
+  font-size: 16px;
+  border: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ly-input .ly-form2 .lya {
+  position: relative;
+  left: 8px;
+  top: 9px;
+  font-size: 12px;
+}
+.ly-input .ly-form2 .forget {
+  position: relative;
+  top: 8px;
+  font-size: 12px;
+}
+.loginapp {
+  width: 42%;
+  height: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.ly-loginWay img {
+  display: inline-block;
+  flex: 1;
+  height: 80%;
+}
+

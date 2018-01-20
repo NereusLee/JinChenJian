@@ -1,0 +1,102 @@
+@import url("lyregister.less");
+@marb2:40px;
+.center(){
+	position:absolute;
+	left:50%;
+	transform: translateX(-50%);
+}
+.ly-input{
+	display:flex;
+	flex-direction: column;
+	// .lytop{
+	// 		flex:2;
+	// }		
+	.ly-form2{
+		width:93%;
+		flex:5;
+		margin: auto;
+		// position: absolute;
+		box-sizing: border-box;
+		margin-top:9px;
+		top:15px;
+		display:flex;
+		flex-direction:column;
+		.lyslice{
+			flex:1;
+		}
+		.ly-check{
+			width:100px;
+			height: 25px;
+			position:relative;
+			top:2px;
+		}	
+		input[name="logname"]{
+			// margin-bottom:60px;
+		}
+		span{
+			display:inline-block;
+			width:100px;
+			height:@kuang;
+			// margin-bottom: @marb2;
+			text-align:right;
+			margin-right:5px;
+		}
+		p{
+			display:inline-block;
+			// text-align:bottom;
+		}
+		input{
+			height:@kuang;
+			// margin-bottom: @marb2;
+			width:270px;
+		}
+		input[type="submit"]{
+			background-color: @mcolor;
+			color:white;
+			font-size: 16px;
+			border: none;
+			.center()
+		}
+	
+		.lya{
+			position:relative;
+			left:8px;
+			top:9px;
+			font-size:12px;
+		}
+		.forget{
+			position:relative;
+			top:8px;
+			font-size:12px;
+		}
+	}
+	// .ly-loginWay{
+	// 	flex:2;
+	// }
+}
+.loginapp{
+	width: 42%;
+	height:75%;
+	margin:0 auto;
+	display:flex;
+	flex-direction:row;
+}
+.ly-loginWay img{
+	display:inline-block;
+	flex:1;
+	// width:;
+	height: 80%;
+}
+
+#lyma{
+	font-style: italic;
+	text-align:center;
+	line-height: 30px;
+	position:relative;
+	top:12px;
+	height:30px;
+	background-color:green;
+	color:white;
+	cursor: pointer;
+	// width
+}

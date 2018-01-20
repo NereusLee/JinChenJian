@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>user</title>
+</head>
+<body>
+</body>
+	<input type="text" id='Dname'>
+	<input type="text" id='Dphone'>
+	<input type="text" id='DEmail'>
+	<button onclick="go()">提交</button>
+	<script   src="http://code.jquery.com/jquery-3.2.0.min.js"   integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="   crossorigin="anonymous"></script>
+	<script>
+		;(function($,w){
+			$.fn.extend({
+				UserAdd:function(){
+					var that=$(this);
+					var opt=arguments[0]
+					console.log(that.attr('id'))
+					var sel=that.attr('id').replace(/D/,'')
+					$.ajax({
+						type:'post',
+						url:'user.php',
+						data:{
+							flag:1,
+							name:opt
+						}
+					}).done(function(data){
+						console.log(data)
+						var sel1=new RegExp('\"'+sel+'\"\:\"[^\,]+\"\,')
+						var sel2=new RegExp('\"'+sel+'\"\:\"')
+						var dad=data.match(sel1).toString().replace(sel2,'').replace(/\"\,/,'')
+						console.log(dad)
+						that.val(dad)
+					})
+				}
+			})
+		})($,window)
+		$.each($('input'),function(k,v){
+			$('input').eq(k).UserAdd('ssd')
+		})
+	</script>
+</html>

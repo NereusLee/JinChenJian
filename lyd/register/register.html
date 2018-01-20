@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	<link rel="stylesheet" type="text/css" href="lycss/lyregister.css">
+	<style type="text/css">
+		body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }  
+		.lyma {
+		  font-style: italic;
+		  text-align: center;
+		  line-height: 30px;
+		  position: relative;
+		  top: 12px;
+		  height: 30px;
+		  background-color: green;
+		  color: white;
+		}
+		.lya{
+			cursor: pointer;
+		}
+		iframe{
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="ly-content">
+		<div class="ly-input">
+			<div class="lytop">
+				<span class="ly-tit" onclick="log()">用户登录</span><span class="ly-tit" onclick="regi()">新用户注册</span>
+			</div>
+			<form class="ly-form">
+				<span>登录名 :</span><input type="text" placeholder="请输入您的登录账号…" id="lyname"><br/>
+				<span>密码 :</span><input type="password" placeholder="请输入6-16位数字和字母…" id="lypass"><br/>
+				<span>确认密码 :</span><input type="password" placeholder="请重复上面的密码…" ><br/>
+				<span>Email :</span><input type="email" placeholder="请输入您的电子邮箱…" id="lymail"><br/>
+				<span>手机号码 :</span><input type="tel" placeholder="请输入您的手机号码…" id="lyphone"><br/>
+				<span>验证码 :</span>
+					<input type="text" class="ly-check">
+				<span class="lyma"></span><p class="lya" onclick="identy($('.lyma').eq(0))">换一个</p>
+				<p class="lytian">您填写的信息,绝不会被公开或用作其他用途,请放心填写</p>
+				<input type="submit" value="同意协议并注册" >
+				<p>阅读《金晨健用户协议》</p>
+			</form>
+
+
+			<form class="ly-form2">
+				<div class="lyslice">
+					<span>登录名 :</span><input type="text" name="logname"><br />
+				</div>
+				<div class="lyslice">
+					<span>密码 :</span><input type="password" name="pass">
+					<p class="forget">忘记密码</p><br />
+				</div>
+				<div class="lyslice">
+					<span>验证码 :</span>
+						<input type="text" name="check" class="ly-check">
+					<span class="lyma"></span>
+					<p class="lya" onclick="identy($('.lyma').eq(1))">换一个</p><br />
+				</div>
+				<div class="lyslice">
+					<input type="submit" value="用户登录">
+				</div>
+			</form>
+			<div class="ly-loginWay">
+				<p>其他方式登录</p>
+				<div class="loginapp">
+					<img src="lyimg/qqly.png" >
+					<img src="lyimg/wechat.png" >
+					<img src="lyimg/weibo.png" >
+				</div>
+			</div>
+		</div>
+	</div>
+	<script   src="http://code.jquery.com/jquery-3.2.0.min.js"   integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="   crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript" src="../../../skip.js"></script> -->
+	<script type="text/javascript" src='lyregister.js'></script>
+	<script type="text/javascript">
+		(function($, window) {
+			var checkArr = [];
+			for (var i = 0; i < 26; i++) {
+				checkArr.push(String.fromCharCode(65 + i)); //输出A-Z 26个大写字母
+				checkArr.push(String.fromCharCode(97 + i));
+			}
+			for (i = 0; i <= 9; i++) {
+				checkArr.push(i)
+			}
+
+			function identy(obj) {//生成验证码
+				obj.html('');
+				var sum = "";
+				for (i = 0; i < 4; i++) {
+					sum += checkArr[parseInt(Math.random() * checkArr.length)];
+				}
+				obj.html(sum);
+			}
+			window.identy=identy;
+
+		})($, window)
+
+
+		window.identy($('.lyma'));
+		//输入验证码
+			$('.ly-check').on('blur', function() {
+				var sel = new RegExp(`${$(this).parents('form').find('.lyma').html()}`, 'i');
+				if (sel.test($(this).val())) {
+					return;
+				} else {
+					alert('验证码错误!')
+				}
+			})
+			$('input[type="submit"]').on("click",function(){
+				identy($(".lyma"));
+				var sel = new RegExp(`${$(this).parents('form').find('.lyma').html()}`, 'i');
+			})
+
+			// var register=new R();
+	</script>
+</body>
+</html>
