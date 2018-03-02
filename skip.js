@@ -45,3 +45,8 @@ $(document).keydown(function() {
 		$('.top_box1_icon').click();
 	}
 });
+
+// window.onbeforeunload=function(){
+// 	alert('closed')
+// 	localStorage.setItem('userName','请登录');
+// }

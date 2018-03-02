@@ -12,16 +12,6 @@ window.onload = function() {
 	}
 }
 
-var log = function() {
-	$('.ly-form').hide();
-	$('.ly-form2').show()
-	identy($('.lyma'))
-}
-var regi = function() {
-	$('.ly-form').show()
-	$('.ly-form2').hide()
-	identy($('.lyma'))
-}
 $('.ly-check').css({
 	'width': '100px',
 	'height': '25px'
@@ -29,8 +19,8 @@ $('.ly-check').css({
 
 
 
-// ;(function($, window) {
-	// function ReAndLog() {
+;(function($, window) {
+	function ReAndLog() {
 		var lyre = $('.ly-form').find('input[type="submit"]')
 		var lylog=$('.ly-form2').find('input[type="submit"]')
 		lyre.on('click', function() {
@@ -75,6 +65,19 @@ $('.ly-check').css({
 				}
 			})
 		})
-	// };
-	// window.R=wind/ow.ReAndLog=ReAndLog;
-// })($, window)
+//注册登录窗口切换
+		ReAndLog.log = function() {
+			$('.ly-form').hide();
+			$('.ly-form2').show()
+			identy($('.lyma'))
+		}
+
+		ReAndLog.regi = function() {
+			$('.ly-form').show()
+			$('.ly-form2').hide()
+			identy($('.lyma'))
+		}
+	};
+	window.R=window.ReAndLog=ReAndLog;
+	return R();
+})($, window)
