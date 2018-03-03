@@ -1,6 +1,6 @@
 # JinChenJian
 项目运行环境:Apache+php+mysql
-项目预览图:
+</br>项目预览图:
 </br>首页:</br>
 <img width="650" src="https://github.com/NereusLee/JinChenJian/blob/master/readme/entry.png"/></br>
 </br>搜索页面:</br>
