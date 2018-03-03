@@ -1,0 +1,42 @@
+{
+  "name": "webpacklx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devs": "webpack --mode development -w",
+    "ser": "webpack-dev-server --mode development --host 172.20.10.5 --hot"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "bootstrap": "^4.0.0",
+    "css-loader": "^0.28.10",
+    "file-loader": "^1.1.10",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.4",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NereusLee/JinChenJian.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NereusLee/JinChenJian/issues"
+  },
+  "homepage": "https://github.com/NereusLee/JinChenJian#readme",
+  "description": ""
+}
