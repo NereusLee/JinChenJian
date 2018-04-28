@@ -18,7 +18,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template:'./lyd/register/kaitou jiewei.html',
-            filename:'regis.html',
+            filename:'index.html',
             minify: {
                 removeComments: true,
                 collapseWhitespace: false //删除空白符与换行符

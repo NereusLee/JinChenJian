@@ -1,4 +1,5 @@
 <?php
+	header('Access-Control-Allow-Origin:*');
 	$pic=$_POST['pic'];
 	// $title=$_POST['title'];
 	$price=$_POST['price'];
